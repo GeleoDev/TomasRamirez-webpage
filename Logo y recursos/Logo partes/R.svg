@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 576">
+  <defs>
+    <style>
+      .cls-1{fill:#000000;display:none}
+      .cls-2{fill:#ffffff;display:none}
+      .cls-3{fill:#ffffff}
+      .cls-4{display:none}
+      .cls-5{fill:url(#linear-gradient-1)}
+      .cls-6{fill:url(#linear-gradient-2);display:none}
+    </style>
+    <linearGradient id="linear-gradient-1" x1="39.141" y1="265.725" x2="182.227" y2="265.725" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#90dcff"/>
+      <stop offset="0.3955" stop-color="#0b61ff"/>
+      <stop offset="1" stop-color="#0600b1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="403.39" y1="265.725" x2="546.476" y2="265.725" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0600b1"/>
+      <stop offset="0.6227" stop-color="#0b61ff"/>
+      <stop offset="1" stop-color="#90dcff"/>
+    </linearGradient>
+  </defs>
+  <title>Logo Carniceria RC</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M0 0 L576 0 L576 576 L0 576 Z" class="cls-1"/>
+    <path d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z" class="cls-2"/>
+    <path d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z" class="cls-3"/>
+    <g class="cls-4">
+      <path d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z" class="cls-5"/>
+    </g>
+    <path d="M403.39 177.601 L546.476 251.256 L546.476 280.193 L403.39 353.849 L403.39 322.72 L470.899 288.523 L509.648 266.601 L509.648 264.848 L470.899 242.926 L403.39 208.729 Z" class="cls-6"/>
+  </g>
+</svg>
