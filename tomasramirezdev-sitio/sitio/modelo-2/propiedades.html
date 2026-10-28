@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propiedades · Modelo 2 · Moderno | Ejemplo de TomasRamirezDev</title>
+<meta name="description" content="Sitio de ejemplo para inmobiliarias (Modelo 2 · Moderno) diseñado por TomasRamirezDev. Propiedades y precios de muestra.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#17191B">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#F4F3EF}
+*{box-sizing:border-box}
+a{color:#17191B}a:hover{color:#C4532F}
+.wrap{max-width:1360px;margin:0 auto;padding:0 32px}
+.kick{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5C6166}
+.kick b{color:#C4532F;font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,background-color .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.b-acc{background:#C4532F;color:#fff}.b-acc:hover{background:#A3402A;color:#fff}
+.b-ink{background:#17191B;color:#fff}.b-ink:hover{background:#000;color:#fff}
+.b-line{background:#fff;color:#17191B;border-color:#DAD7CF}.b-line:hover{border-color:#17191B;color:#17191B}
+.b-white{background:#fff;color:#17191B}.b-white:hover{background:#F4F3EF;color:#17191B}
+.nl{position:relative;display:inline-flex;align-items:center;height:72px;color:#3B3F43;text-decoration:none;font-weight:600;font-size:15px}
+.nl::after{content:"";position:absolute;left:0;right:0;bottom:20px;height:2px;background:#C4532F;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nl:hover{color:#17191B}.nl:hover::after,.nl.on::after{transform:scaleX(1)}
+.nl.on{color:#17191B}
+.seg{display:inline-flex;padding:4px;border-radius:12px;background:#ECE9E1}
+.seg button{min-height:38px;padding:0 14px;border:none;border-radius:9px;background:transparent;font-family:inherit;font-size:14.5px;font-weight:700;color:#5C6166;cursor:pointer;transition:background-color .2s,color .2s}
+.seg button.on{background:#fff;color:#17191B;box-shadow:0 2px 6px rgba(23,25,27,.12)}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 14px;border-radius:999px;border:1px solid #DAD7CF;background:#fff;font-family:inherit;font-size:14px;font-weight:600;color:#17191B;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.chip:hover{border-color:#17191B}
+.chip.on{background:#17191B;color:#fff;border-color:#17191B}
+.fld{min-height:44px;padding:0 14px;border:1px solid #DAD7CF;border-radius:12px;background:#fff;font-family:inherit;font-size:15px;color:#17191B}
+.fld:focus{outline:none;border-color:#17191B;box-shadow:0 0 0 3px rgba(23,25,27,.08)}
+.split{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);gap:28px;align-items:start}
+.mapcol{position:sticky;top:160px}
+.lc{display:grid;grid-template-columns:250px minmax(0,1fr);gap:0;border-radius:18px;background:#fff;border:1px solid #E2E0D9;overflow:hidden;transition:border-color .25s,box-shadow .25s,transform .25s}
+.lc:hover,.lc.hot{border-color:#17191B;box-shadow:0 22px 40px -30px rgba(23,25,27,.5)}
+.lc.hot{transform:translateX(4px)}
+.lc .im{position:relative;display:block;min-height:210px;overflow:hidden;background:#E6E4DE}
+.lc .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.lc:hover .im img{transform:scale(1.05)}
+.tag{position:absolute;left:12px;top:12px;padding:5px 10px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#fff}
+.fav{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;border:1px solid #DAD7CF;background:#fff;color:#17191B;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.fav:hover{border-color:#17191B}
+.fav.on{background:#F9E7E1;border-color:#C4532F;color:#C4532F}
+.fav svg{width:18px;height:18px}
+.fav.on svg{fill:#C4532F}
+.ft{display:inline-flex;align-items:center;min-height:26px;padding:0 10px;border-radius:7px;background:#F4F3EF;font-size:12.5px;font-weight:700;color:#3B3F43}
+.pin{position:absolute;transform:translate(-50%,-100%);padding:7px 11px;border-radius:10px;border:none;background:#fff;color:#17191B;font-family:inherit;font-size:13px;font-weight:800;white-space:nowrap;cursor:pointer;box-shadow:0 6px 16px -6px rgba(23,25,27,.45);transition:background-color .2s,color .2s,transform .2s;z-index:2}
+.pin::after{content:"";position:absolute;left:50%;bottom:-5px;width:10px;height:10px;background:inherit;transform:translateX(-50%) rotate(45deg);border-radius:2px}
+.pin:hover,.pin.hot{background:#C4532F;color:#fff;transform:translate(-50%,-100%) scale(1.08);z-index:3}
+.zl{position:absolute;transform:translate(-50%,-50%);font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8E8A80;white-space:nowrap;pointer-events:none}
+.mz{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:none;background:#fff;font-family:inherit;font-size:18px;font-weight:700;color:#17191B;cursor:pointer}
+.fl a{color:#B9BCBF;text-decoration:none}.fl a:hover{color:#fff}
+.fu{opacity:0;animation:fu .7s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}
+@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.pop{animation:pop .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #C4532F;outline-offset:2px}
+@media (max-width: 1060px){.split{grid-template-columns:1fr}.mapcol{position:relative;top:auto}}
+@media (max-width: 960px){.hide-m{display:none!important}}
+@media (max-width: 640px){.lc{grid-template-columns:1fr}.lc .im{min-height:220px}}
+@media (prefers-reduced-motion: reduce){.fu,.pop{animation:none!important;opacity:1!important;transform:none!important}}
+:root{--mn-r:12px;--mn-bd:#DAD7CF;--mn-bg:#FFFFFF;--mn-fg:#17191B;--mp-bg:#FFFFFF;--mp-bd:#E2E0D9;--mp-fg:#17191B;--mp-hv:#F4F3EF;--mc-bg:#C4532F;--mc-fg:#FFFFFF}
+.mnav{display:none}
+.mnav>summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--mn-r);border:1px solid var(--mn-bd);background:var(--mn-bg);color:var(--mn-fg);cursor:pointer}
+.mnav>summary::-webkit-details-marker{display:none}
+.mnav .i-x{display:none}.mnav[open] .i-x{display:block}.mnav[open] .i-m{display:none}
+.mnav-panel{position:absolute;left:16px;right:16px;top:calc(100% + 8px);display:flex;flex-direction:column;gap:2px;padding:10px;border-radius:18px;background:var(--mp-bg);border:1px solid var(--mp-bd);box-shadow:0 30px 60px -30px rgba(0,0,0,.45);z-index:80;animation:mnav .25s cubic-bezier(.2,.7,.2,1)}
+@keyframes mnav{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mnav-panel a{display:block;padding:13px 14px;border-radius:12px;font-size:16.5px;font-weight:600;color:var(--mp-fg);text-decoration:none}
+.mnav-panel a:hover,.mnav-panel a[aria-current]{background:var(--mp-hv);color:var(--mp-fg)}
+.mnav-panel a.mn-cta{margin-top:6px;text-align:center;background:var(--mc-bg);color:var(--mc-fg)}
+.mnav-panel a.mn-cta:hover{background:var(--mc-bg);color:var(--mc-fg);filter:brightness(.94)}
+@media (max-width: 960px){.mnav{display:block}}
+@media (max-width: 560px){.hide-s{display:none!important}}
+</style>
+<style>#dc-root{min-height:100vh}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #17191B; background: #F4F3EF; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div style="background: #0E2A20; color: #E6ECE7; font-size: 13.5px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+<span><b style="color: #E2C27A">Sitio de ejemplo · Modelo 2 · Moderno.</b> Colores, fotos y secciones se adaptan a cada inmobiliaria.</span>
+<a href="../index.html" style="color: #E2C27A; text-decoration: none; font-weight: 600">← Volver a TomasRamirezDev</a>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #17191B"><svg viewBox="25 110 608 320" width="50" height="26" aria-hidden="true"><path fill="#C4532F" d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z"></path><path fill="#C4532F" d="M475.39 177.601 L618.476 251.256 L618.476 280.193 L475.39 353.849 L475.39 322.72 L542.899 288.523 L581.648 266.601 L581.648 264.848 L542.899 242.926 L475.39 208.729 Z"></path><path fill="#17191B" d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z"></path><path fill="#17191B" d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z"></path></svg><span style="font-weight: 800; font-size: 20px; letter-spacing: -0.03em">tu<span style="color: #C4532F">inmobiliaria</span></span></a>
+<nav class="hide-m" aria-label="Principal" style="display: flex; gap: 32px"><a class="nl" href="index.html">Inicio</a><a class="nl on" href="propiedades.html" aria-current="page">Propiedades</a><a class="nl" href="tasacion.html">Tasaciones</a><a class="nl" href="nosotros.html">Nosotros</a><a class="nl" href="contacto.html">Contacto</a></nav>
+<div style="display: flex; align-items: center; gap: 10px"><a class="btn b-line hide-m" href="contacto.html" style="min-height: 44px; padding: 0 16px"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg>WhatsApp</a><a class="btn b-acc hide-s" href="tasacion.html" style="min-height: 44px">Publicá tu propiedad</a><details class="mnav"><summary aria-label="Menú"><svg class="i-m" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-x" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary><nav class="mnav-panel" aria-label="Menú"><a href="index.html">Inicio</a><a href="propiedades.html" aria-current="page">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a class="mn-cta" href="tasacion.html">Publicá tu propiedad</a></nav></details></div>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 44px; padding-bottom: 24px; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px">
+<div><div class="kick fu d1"><b>●</b> Propiedades</div><h1 class="fu d2" style="margin: 10px 0 0; font-weight: 800; font-size: clamp(38px, 4.6vw, 64px); line-height: 1; letter-spacing: -0.045em">Todas las propiedades</h1></div>
+<p class="fu d3" style="margin: 0; font-size: 16px; color: #5C6166"><b style="color: #17191B">6 propiedades</b> · Propiedades y precios de ejemplo</p>
+</section>
+
+<div style="position: sticky; top: 72px; z-index: 30; background: rgba(244,243,239,.94); backdrop-filter: blur(10px); border-top: 1px solid #E2E0D9; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; padding-top: 12px; padding-bottom: 12px">
+<div class="seg" role="group" aria-label="Operación"><button type="button" class="on" aria-pressed="true" data-on-click="0">Todas</button><button type="button" class="" aria-pressed="false" data-on-click="1">Comprar</button><button type="button" class="" aria-pressed="false" data-on-click="2">Alquilar</button></div>
+<div role="group" aria-label="Tipo de propiedad" style="display: flex; flex-wrap: wrap; gap: 6px"><button type="button" class="chip on" aria-pressed="true" data-on-click="3">Todos</button><button type="button" class="chip " aria-pressed="false" data-on-click="4">Casas</button><button type="button" class="chip " aria-pressed="false" data-on-click="5">Departamentos</button><button type="button" class="chip " aria-pressed="false" data-on-click="6">PH</button></div>
+<div role="group" aria-label="Ambientes" style="display: flex; align-items: center; gap: 6px"><span style="font-size: 13.5px; font-weight: 700; color: #5C6166">Ambientes</span><button type="button" class="chip on" aria-pressed="true" data-on-click="7" style="padding: 0 12px">Todos</button><button type="button" class="chip " aria-pressed="false" data-on-click="8" style="padding: 0 12px">3</button><button type="button" class="chip " aria-pressed="false" data-on-click="9" style="padding: 0 12px">4+</button></div>
+<div style="flex: 1"></div>
+<label style="position: relative; display: flex; align-items: center"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5C6166" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: 13px"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><input class="fld" type="search" placeholder="Barrio o palabra clave" aria-label="Buscar" value="" data-on-input="10" style="padding-left: 38px; width: 220px"></label>
+<select class="fld" aria-label="Ordenar" data-on-change="11"><option value="rel" selected="">Más recientes</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option><option value="m2">Mayor superficie</option></select>
+<button type="button" class="chip " aria-pressed="false" data-on-click="12"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg>Guardadas (0)</button>
+</div>
+</div>
+
+<section class="wrap" style="padding-top: 28px; padding-bottom: 80px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 16px">
+
+<article class="lc " data-on-mouseenter="13" data-on-mouseleave="14">
+<a class="im" href="ficha.html" aria-label="Ver Casa moderna en dos plantas con cochera"><img src="../assets/img/casa1-frente.webp" alt="Casa moderna en dos plantas con cochera"><span class="tag" style="background: #17191B">Venta</span></a>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 22px">
+<div style="display: flex; align-items: start; justify-content: space-between; gap: 12px"><div><b style="font-size: 22px; letter-spacing: -0.03em">USD 165.000</b><div style="font-size: 14px; font-weight: 600; color: #5C6166">Casa · Barrio Parque</div></div><button type="button" class="fav " aria-pressed="false" aria-label="Guardar propiedad" data-on-click="15"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg></button></div>
+<a href="ficha.html" style="font-weight: 700; font-size: 17.5px; line-height: 1.35; text-decoration: none">Casa moderna en dos plantas con cochera</a>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; color: #3B3F43"><span><b>220</b> m²</span><span><b>5</b> amb.</span><span><b>3</b> dorm.</span><span><b>3</b> baños</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid #ECE9E1"><div style="display: flex; gap: 6px"><span class="ft">Cochera</span><span class="ft">Dos plantas</span></div><a href="ficha.html" style="font-weight: 700; font-size: 14.5px; text-decoration: none; color: #C4532F">Ver ficha →</a></div>
+</div>
+</article>
+
+<article class="lc " data-on-mouseenter="16" data-on-mouseleave="17">
+<a class="im" href="ficha.html" aria-label="Ver Casa de 3 ambientes con patio"><img src="../assets/img/casa4-frente.webp" alt="Casa de 3 ambientes con patio"><span class="tag" style="background: #C4532F">Alquiler</span></a>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 22px">
+<div style="display: flex; align-items: start; justify-content: space-between; gap: 12px"><div><b style="font-size: 22px; letter-spacing: -0.03em">$ 750.000 / mes</b><div style="font-size: 14px; font-weight: 600; color: #5C6166">Casa · Centro</div></div><button type="button" class="fav " aria-pressed="false" aria-label="Guardar propiedad" data-on-click="18"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg></button></div>
+<a href="ficha.html" style="font-weight: 700; font-size: 17.5px; line-height: 1.35; text-decoration: none">Casa de 3 ambientes con patio</a>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; color: #3B3F43"><span><b>110</b> m²</span><span><b>3</b> amb.</span><span><b>2</b> dorm.</span><span><b>1</b> baño</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid #ECE9E1"><div style="display: flex; gap: 6px"><span class="ft">Patio</span><span class="ft">Céntrica</span></div><a href="ficha.html" style="font-weight: 700; font-size: 14.5px; text-decoration: none; color: #C4532F">Ver ficha →</a></div>
+</div>
+</article>
+
+<article class="lc " data-on-mouseenter="19" data-on-mouseleave="20">
+<a class="im" href="ficha.html" aria-label="Ver Casa de campo con galería y parque"><img src="../assets/img/casa2-frente.webp" alt="Casa de campo con galería y parque"><span class="tag" style="background: #17191B">Venta</span></a>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 22px">
+<div style="display: flex; align-items: start; justify-content: space-between; gap: 12px"><div><b style="font-size: 22px; letter-spacing: -0.03em">USD 140.000</b><div style="font-size: 14px; font-weight: 600; color: #5C6166">Casa · Quintas</div></div><button type="button" class="fav " aria-pressed="false" aria-label="Guardar propiedad" data-on-click="21"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg></button></div>
+<a href="ficha.html" style="font-weight: 700; font-size: 17.5px; line-height: 1.35; text-decoration: none">Casa de campo con galería y parque</a>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; color: #3B3F43"><span><b>260</b> m²</span><span><b>4</b> amb.</span><span><b>3</b> dorm.</span><span><b>2</b> baños</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid #ECE9E1"><div style="display: flex; gap: 6px"><span class="ft">Galería</span><span class="ft">Parque</span></div><a href="ficha.html" style="font-weight: 700; font-size: 14.5px; text-decoration: none; color: #C4532F">Ver ficha →</a></div>
+</div>
+</article>
+
+<article class="lc " data-on-mouseenter="22" data-on-mouseleave="23">
+<a class="im" href="ficha.html" aria-label="Ver Departamento a estrenar con mucha luz"><img src="../assets/img/casa1-interior.webp" alt="Departamento a estrenar con mucha luz"><span class="tag" style="background: #C4532F">Alquiler</span></a>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 22px">
+<div style="display: flex; align-items: start; justify-content: space-between; gap: 12px"><div><b style="font-size: 22px; letter-spacing: -0.03em">$ 620.000 / mes</b><div style="font-size: 14px; font-weight: 600; color: #5C6166">Departamento · Centro</div></div><button type="button" class="fav " aria-pressed="false" aria-label="Guardar propiedad" data-on-click="24"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg></button></div>
+<a href="ficha.html" style="font-weight: 700; font-size: 17.5px; line-height: 1.35; text-decoration: none">Departamento a estrenar con mucha luz</a>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; color: #3B3F43"><span><b>65</b> m²</span><span><b>3</b> amb.</span><span><b>2</b> dorm.</span><span><b>1</b> baño</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid #ECE9E1"><div style="display: flex; gap: 6px"><span class="ft">A estrenar</span><span class="ft">Luminoso</span></div><a href="ficha.html" style="font-weight: 700; font-size: 14.5px; text-decoration: none; color: #C4532F">Ver ficha →</a></div>
+</div>
+</article>
+
+<article class="lc " data-on-mouseenter="25" data-on-mouseleave="26">
+<a class="im" href="ficha.html" aria-label="Ver Casa con jardín al frente y parrilla"><img src="../assets/img/casa3-frente.webp" alt="Casa con jardín al frente y parrilla"><span class="tag" style="background: #17191B">Venta</span></a>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 22px">
+<div style="display: flex; align-items: start; justify-content: space-between; gap: 12px"><div><b style="font-size: 22px; letter-spacing: -0.03em">USD 98.000</b><div style="font-size: 14px; font-weight: 600; color: #5C6166">Casa · Zona Residencial</div></div><button type="button" class="fav " aria-pressed="false" aria-label="Guardar propiedad" data-on-click="27"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg></button></div>
+<a href="ficha.html" style="font-weight: 700; font-size: 17.5px; line-height: 1.35; text-decoration: none">Casa con jardín al frente y parrilla</a>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; color: #3B3F43"><span><b>140</b> m²</span><span><b>4</b> amb.</span><span><b>2</b> dorm.</span><span><b>1</b> baño</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid #ECE9E1"><div style="display: flex; gap: 6px"><span class="ft">Jardín</span><span class="ft">Parrilla</span></div><a href="ficha.html" style="font-weight: 700; font-size: 14.5px; text-decoration: none; color: #C4532F">Ver ficha →</a></div>
+</div>
+</article>
+
+<article class="lc " data-on-mouseenter="28" data-on-mouseleave="29">
+<a class="im" href="ficha.html" aria-label="Ver PH de 3 ambientes al frente"><img src="../assets/img/casa3-living.webp" alt="PH de 3 ambientes al frente"><span class="tag" style="background: #C4532F">Alquiler</span></a>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 22px">
+<div style="display: flex; align-items: start; justify-content: space-between; gap: 12px"><div><b style="font-size: 22px; letter-spacing: -0.03em">$ 540.000 / mes</b><div style="font-size: 14px; font-weight: 600; color: #5C6166">PH · Cerca de la estación</div></div><button type="button" class="fav " aria-pressed="false" aria-label="Guardar propiedad" data-on-click="30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg></button></div>
+<a href="ficha.html" style="font-weight: 700; font-size: 17.5px; line-height: 1.35; text-decoration: none">PH de 3 ambientes al frente</a>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; color: #3B3F43"><span><b>70</b> m²</span><span><b>3</b> amb.</span><span><b>2</b> dorm.</span><span><b>1</b> baño</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid #ECE9E1"><div style="display: flex; gap: 6px"><span class="ft">Al frente</span><span class="ft">Sin expensas</span></div><a href="ficha.html" style="font-weight: 700; font-size: 14.5px; text-decoration: none; color: #C4532F">Ver ficha →</a></div>
+</div>
+</article>
+
+
+</div>
+
+<aside class="mapcol" aria-label="Mapa de propiedades">
+<div style="position: relative; height: 640px; border-radius: 20px; overflow: hidden; background: #E9E6DE; border: 1px solid #DAD7CF">
+<svg viewBox="0 0 600 700" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<rect width="600" height="700" fill="#E9E6DE"></rect>
+<path d="M0 470 C120 450 210 520 330 500 C450 480 520 540 600 520 L600 560 C520 580 450 520 330 540 C210 560 120 490 0 510 Z" fill="#D4DEE0"></path>
+<rect x="60" y="90" width="150" height="120" rx="14" fill="#D5E1CC"></rect>
+<rect x="400" y="40" width="170" height="150" rx="14" fill="#D5E1CC"></rect>
+<rect x="250" y="250" width="110" height="80" rx="10" fill="#D5E1CC"></rect>
+<g stroke="#F7F5F0" stroke-width="14" fill="none" stroke-linecap="round"><path d="M0 230 L600 260"></path><path d="M300 0 L280 700"></path><path d="M0 610 L600 640"></path></g>
+<g stroke="#F7F5F0" stroke-width="6" fill="none"><path d="M0 120 L600 140"></path><path d="M0 360 L600 380"></path><path d="M140 0 L120 700"></path><path d="M450 0 L440 700"></path><path d="M0 420 L600 440"></path><path d="M210 0 L190 700"></path><path d="M370 0 L360 700"></path><path d="M530 0 L520 700"></path><path d="M60 0 L40 700"></path></g>
+<g stroke="#9C978C" stroke-width="3" stroke-dasharray="10 8" fill="none"><path d="M0 680 L600 560"></path></g>
+<rect x="408" y="584" width="44" height="18" rx="4" fill="#9C978C" transform="rotate(-11 430 593)"></rect>
+</svg>
+<span class="zl" style="left: 22%; top: 15%">Barrio Parque</span>
+<span class="zl" style="left: 80%; top: 32%">Quintas</span>
+<span class="zl" style="left: 54%; top: 40%">Centro</span>
+<span class="zl" style="left: 22%; top: 90%">Zona Residencial</span>
+<span class="zl" style="left: 74%; top: 92%">Cerca de la estación</span>
+<button type="button" class="pin " style="left: 22%; top: 30%" aria-label="Casa moderna en dos plantas con cochera, USD 165.000" data-on-click="31" data-on-mouseenter="32" data-on-mouseleave="33">USD 165k</button><button type="button" class="pin " style="left: 52%; top: 50%" aria-label="Casa de 3 ambientes con patio, $ 750.000 / mes" data-on-click="34" data-on-mouseenter="35" data-on-mouseleave="36">$ 750k</button><button type="button" class="pin " style="left: 80%; top: 24%" aria-label="Casa de campo con galería y parque, USD 140.000" data-on-click="37" data-on-mouseenter="38" data-on-mouseleave="39">USD 140k</button><button type="button" class="pin " style="left: 44%; top: 63%" aria-label="Departamento a estrenar con mucha luz, $ 620.000 / mes" data-on-click="40" data-on-mouseenter="41" data-on-mouseleave="42">$ 620k</button><button type="button" class="pin " style="left: 28%; top: 78%" aria-label="Casa con jardín al frente y parrilla, USD 98.000" data-on-click="43" data-on-mouseenter="44" data-on-mouseleave="45">USD 98k</button><button type="button" class="pin " style="left: 70%; top: 76%" aria-label="PH de 3 ambientes al frente, $ 540.000 / mes" data-on-click="46" data-on-mouseenter="47" data-on-mouseleave="48">$ 540k</button>
+<div style="position: absolute; right: 14px; top: 14px; display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px -8px rgba(23,25,27,.4)"><button type="button" class="mz" aria-label="Acercar">+</button><span style="height: 1px; background: #E2E0D9"></span><button type="button" class="mz" aria-label="Alejar">−</button></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 6px 10px; border-radius: 8px; background: rgba(255,255,255,.9); font-size: 12px; font-weight: 700; color: #5C6166">Mapa ilustrativo</span>
+
+</div>
+<p style="margin: 10px 2px 0; font-size: 13.5px; color: #7A7F84">Pasá el mouse por una propiedad para verla en el mapa. En el sitio real se usa un mapa con la ubicación aproximada.</p>
+</aside>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 32px; align-items: center; padding: 40px 44px; border-radius: 24px; background: #17191B; color: #FFFFFF">
+<div><div class="kick" style="color: #B9BCBF"><b>●</b> Alerta de búsqueda</div><h2 style="margin: 10px 0 0; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.08; letter-spacing: -0.035em">¿No encontraste lo que buscabas?</h2><p style="margin: 10px 0 0; color: #B9BCBF">Dejanos tu WhatsApp y qué estás buscando. Cuando entre algo parecido, te avisamos.</p></div>
+
+<form data-on-submit="49" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 10px">
+<input class="fld" type="text" required="" placeholder="Qué buscás (ej.: casa 3 amb.)" aria-label="Qué buscás" style="min-height: 52px; border-color: #34373A; background: #222528; color: #FFFFFF">
+<input class="fld" type="tel" required="" placeholder="Tu WhatsApp" aria-label="Tu WhatsApp" style="min-height: 52px; border-color: #34373A; background: #222528; color: #FFFFFF">
+<button type="submit" class="btn b-acc" style="min-height: 52px; grid-column: 1 / -1">Avisame cuando haya algo</button>
+</form>
+
+
+</div>
+</section>
+
+<footer style="background: #17191B; color: #B9BCBF">
+<div class="wrap" style="padding-top: 72px">
+<div style="font-weight: 800; font-size: clamp(56px, 10vw, 150px); line-height: .9; letter-spacing: -0.06em; color: #FFFFFF">tu<span style="color: #C4532F">inmobiliaria</span></div>
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; margin-top: 48px; padding-bottom: 40px; font-size: 15px">
+<div><p style="margin: 0">Compra, venta, alquiler y tasaciones de propiedades.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Explorar</b><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Contacto</b><span>Dirección de la oficina</span><span>Teléfono y WhatsApp</span><span>Correo electrónico</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Horarios</b><span>Lunes a viernes</span><span>Sábados por la mañana</span></div>
+</div>
+<div style="padding: 18px 0 28px; border-top: 1px solid #2C2F33; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13.5px; color: #7A7F84"><span>Sitio de ejemplo · Modelo 2 · Moderno</span><a href="../index.html" style="color: #E2C27A; text-decoration: none">Diseñado por TomasRamirezDev</a></div>
+</div>
+</footer>
+</div>
+</div>
+<template id="dc-tpl">
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #17191B; background: #F4F3EF; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div style="background: #0E2A20; color: #E6ECE7; font-size: 13.5px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+<span><b style="color: #E2C27A">Sitio de ejemplo · Modelo 2 · Moderno.</b> Colores, fotos y secciones se adaptan a cada inmobiliaria.</span>
+<a href="../index.html" style="color: #E2C27A; text-decoration: none; font-weight: 600">← Volver a TomasRamirezDev</a>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #17191B"><svg viewBox="25 110 608 320" width="50" height="26" aria-hidden="true"><path fill="#C4532F" d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z"></path><path fill="#C4532F" d="M475.39 177.601 L618.476 251.256 L618.476 280.193 L475.39 353.849 L475.39 322.72 L542.899 288.523 L581.648 266.601 L581.648 264.848 L542.899 242.926 L475.39 208.729 Z"></path><path fill="#17191B" d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z"></path><path fill="#17191B" d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z"></path></svg><span style="font-weight: 800; font-size: 20px; letter-spacing: -0.03em">tu<span style="color: #C4532F">inmobiliaria</span></span></a>
+<nav class="hide-m" aria-label="Principal" style="display: flex; gap: 32px"><a class="nl" href="index.html">Inicio</a><a class="nl on" href="propiedades.html" aria-current="page">Propiedades</a><a class="nl" href="tasacion.html">Tasaciones</a><a class="nl" href="nosotros.html">Nosotros</a><a class="nl" href="contacto.html">Contacto</a></nav>
+<div style="display: flex; align-items: center; gap: 10px"><a class="btn b-line hide-m" href="contacto.html" style="min-height: 44px; padding: 0 16px"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg>WhatsApp</a><a class="btn b-acc hide-s" href="tasacion.html" style="min-height: 44px">Publicá tu propiedad</a><details class="mnav"><summary aria-label="Menú"><svg class="i-m" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-x" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary><nav class="mnav-panel" aria-label="Menú"><a href="index.html">Inicio</a><a href="propiedades.html" aria-current="page">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a class="mn-cta" href="tasacion.html">Publicá tu propiedad</a></nav></details></div>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 44px; padding-bottom: 24px; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px">
+<div><div class="kick fu d1"><b>●</b> Propiedades</div><h1 class="fu d2" style="margin: 10px 0 0; font-weight: 800; font-size: clamp(38px, 4.6vw, 64px); line-height: 1; letter-spacing: -0.045em">Todas las propiedades</h1></div>
+<p class="fu d3" style="margin: 0; font-size: 16px; color: #5C6166"><b style="color: #17191B">{{countLbl}}</b> · Propiedades y precios de ejemplo</p>
+</section>
+
+<div style="position: sticky; top: 72px; z-index: 30; background: rgba(244,243,239,.94); backdrop-filter: blur(10px); border-top: 1px solid #E2E0D9; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; padding-top: 12px; padding-bottom: 12px">
+<div class="seg" role="group" aria-label="Operación"><sc-for list="{{ops}}" as="o" hint-placeholder-count="3"><button type="button" class="{{o.c}}" aria-pressed="{{o.p}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div>
+<div role="group" aria-label="Tipo de propiedad" style="display: flex; flex-wrap: wrap; gap: 6px"><sc-for list="{{types}}" as="t" hint-placeholder-count="4"><button type="button" class="chip {{t.c}}" aria-pressed="{{t.p}}" onClick="{{t.pick}}">{{t.label}}</button></sc-for></div>
+<div role="group" aria-label="Ambientes" style="display: flex; align-items: center; gap: 6px"><span style="font-size: 13.5px; font-weight: 700; color: #5C6166">Ambientes</span><sc-for list="{{ambs}}" as="a" hint-placeholder-count="3"><button type="button" class="chip {{a.c}}" aria-pressed="{{a.p}}" onClick="{{a.pick}}" style="padding: 0 12px">{{a.label}}</button></sc-for></div>
+<div style="flex: 1"></div>
+<label style="position: relative; display: flex; align-items: center"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5C6166" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: 13px"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg><input class="fld" type="search" placeholder="Barrio o palabra clave" aria-label="Buscar" value="{{q}}" onInput="{{onQ}}" style="padding-left: 38px; width: 220px"></label>
+<select class="fld" aria-label="Ordenar" value="{{sort}}" onChange="{{onSort}}"><option value="rel">Más recientes</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option><option value="m2">Mayor superficie</option></select>
+<button type="button" class="chip {{favC}}" aria-pressed="{{favP}}" onClick="{{toggleOnlyFav}}"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg>Guardadas ({{favCount}})</button>
+</div>
+</div>
+
+<section class="wrap" style="padding-top: 28px; padding-bottom: 80px">
+<div class="split">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<sc-for list="{{items}}" as="p" hint-placeholder-count="6">
+<article class="lc {{p.hc}}" onMouseEnter="{{p.enter}}" onMouseLeave="{{leave}}">
+<a class="im" href="ficha.html" aria-label="Ver {{p.title}}"><img src="{{p.img}}" alt="{{p.title}}"><span class="tag" style="background: {{p.tagBg}}">{{p.op}}</span></a>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 22px">
+<div style="display: flex; align-items: start; justify-content: space-between; gap: 12px"><div><b style="font-size: 22px; letter-spacing: -0.03em">{{p.price}}</b><div style="font-size: 14px; font-weight: 600; color: #5C6166">{{p.type}} · {{p.zone}}</div></div><button type="button" class="fav {{p.fc}}" aria-pressed="{{p.fp}}" aria-label="Guardar propiedad" onClick="{{p.toggleFav}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"></path></svg></button></div>
+<a href="ficha.html" style="font-weight: 700; font-size: 17.5px; line-height: 1.35; text-decoration: none">{{p.title}}</a>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; color: #3B3F43"><span><b>{{p.m2}}</b> m²</span><span><b>{{p.amb}}</b> amb.</span><span><b>{{p.dorm}}</b> dorm.</span><span><b>{{p.banos}}</b> {{p.banosLbl}}</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid #ECE9E1"><div style="display: flex; gap: 6px"><sc-for list="{{p.feats}}" as="f" hint-placeholder-count="2"><span class="ft">{{f.t}}</span></sc-for></div><a href="ficha.html" style="font-weight: 700; font-size: 14.5px; text-decoration: none; color: #C4532F">Ver ficha →</a></div>
+</div>
+</article>
+</sc-for>
+<sc-if value="{{empty}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 48px 32px; border-radius: 18px; border: 1px dashed #C9C5BB; background: #FFFFFF; text-align: center"><b style="font-size: 22px; letter-spacing: -0.02em">No hay propiedades con esos filtros.</b><p style="margin: 8px auto 18px; max-width: 420px; color: #5C6166">Probá sacando algún filtro, o dejanos lo que buscás y te avisamos cuando entre algo parecido.</p><button type="button" class="btn b-ink" onClick="{{reset}}">Limpiar filtros</button></div>
+</sc-if>
+</div>
+
+<aside class="mapcol" aria-label="Mapa de propiedades">
+<div style="position: relative; height: 640px; border-radius: 20px; overflow: hidden; background: #E9E6DE; border: 1px solid #DAD7CF">
+<svg viewBox="0 0 600 700" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<rect width="600" height="700" fill="#E9E6DE"></rect>
+<path d="M0 470 C120 450 210 520 330 500 C450 480 520 540 600 520 L600 560 C520 580 450 520 330 540 C210 560 120 490 0 510 Z" fill="#D4DEE0"></path>
+<rect x="60" y="90" width="150" height="120" rx="14" fill="#D5E1CC"></rect>
+<rect x="400" y="40" width="170" height="150" rx="14" fill="#D5E1CC"></rect>
+<rect x="250" y="250" width="110" height="80" rx="10" fill="#D5E1CC"></rect>
+<g stroke="#F7F5F0" stroke-width="14" fill="none" stroke-linecap="round"><path d="M0 230 L600 260"></path><path d="M300 0 L280 700"></path><path d="M0 610 L600 640"></path></g>
+<g stroke="#F7F5F0" stroke-width="6" fill="none"><path d="M0 120 L600 140"></path><path d="M0 360 L600 380"></path><path d="M140 0 L120 700"></path><path d="M450 0 L440 700"></path><path d="M0 420 L600 440"></path><path d="M210 0 L190 700"></path><path d="M370 0 L360 700"></path><path d="M530 0 L520 700"></path><path d="M60 0 L40 700"></path></g>
+<g stroke="#9C978C" stroke-width="3" stroke-dasharray="10 8" fill="none"><path d="M0 680 L600 560"></path></g>
+<rect x="408" y="584" width="44" height="18" rx="4" fill="#9C978C" transform="rotate(-11 430 593)"></rect>
+</svg>
+<span class="zl" style="left: 22%; top: 15%">Barrio Parque</span>
+<span class="zl" style="left: 80%; top: 32%">Quintas</span>
+<span class="zl" style="left: 54%; top: 40%">Centro</span>
+<span class="zl" style="left: 22%; top: 90%">Zona Residencial</span>
+<span class="zl" style="left: 74%; top: 92%">Cerca de la estación</span>
+<sc-for list="{{pins}}" as="m" hint-placeholder-count="6"><button type="button" class="pin {{m.pc}}" style="left: {{m.x}}%; top: {{m.y}}%" aria-label="{{m.title}}, {{m.price}}" onClick="{{m.select}}" onMouseEnter="{{m.enter}}" onMouseLeave="{{leave}}">{{m.short}}</button></sc-for>
+<div style="position: absolute; right: 14px; top: 14px; display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px -8px rgba(23,25,27,.4)"><button type="button" class="mz" aria-label="Acercar">+</button><span style="height: 1px; background: #E2E0D9"></span><button type="button" class="mz" aria-label="Alejar">−</button></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 6px 10px; border-radius: 8px; background: rgba(255,255,255,.9); font-size: 12px; font-weight: 700; color: #5C6166">Mapa ilustrativo</span>
+<sc-if value="{{hasSel}}" hint-placeholder-val="{{ false }}">
+<div class="pop" style="position: absolute; left: 14px; right: 14px; bottom: 14px; display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 10px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 20px 40px -20px rgba(23,25,27,.5)">
+<img src="{{sel.img}}" alt="{{sel.title}}" style="width: 110px; height: 92px; object-fit: cover; border-radius: 10px">
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 2px; min-width: 0"><b style="font-size: 17px; letter-spacing: -0.02em">{{sel.price}}</b><span style="font-size: 14px; font-weight: 600; line-height: 1.3">{{sel.title}}</span><a href="ficha.html" style="font-size: 13.5px; font-weight: 700; text-decoration: none; color: #C4532F">Ver ficha →</a></div>
+<button type="button" onClick="{{closeSel}}" aria-label="Cerrar" style="position: absolute; right: 8px; top: 8px; width: 28px; height: 28px; border: none; border-radius: 8px; background: #F4F3EF; cursor: pointer; font-size: 15px">×</button>
+</div>
+</sc-if>
+</div>
+<p style="margin: 10px 2px 0; font-size: 13.5px; color: #7A7F84">Pasá el mouse por una propiedad para verla en el mapa. En el sitio real se usa un mapa con la ubicación aproximada.</p>
+</aside>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 32px; align-items: center; padding: 40px 44px; border-radius: 24px; background: #17191B; color: #FFFFFF">
+<div><div class="kick" style="color: #B9BCBF"><b>●</b> Alerta de búsqueda</div><h2 style="margin: 10px 0 0; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.08; letter-spacing: -0.035em">¿No encontraste lo que buscabas?</h2><p style="margin: 10px 0 0; color: #B9BCBF">Dejanos tu WhatsApp y qué estás buscando. Cuando entre algo parecido, te avisamos.</p></div>
+<sc-if value="{{alertOff}}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{sendAlert}}" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 10px">
+<input class="fld" type="text" required placeholder="Qué buscás (ej.: casa 3 amb.)" aria-label="Qué buscás" style="min-height: 52px; border-color: #34373A; background: #222528; color: #FFFFFF">
+<input class="fld" type="tel" required placeholder="Tu WhatsApp" aria-label="Tu WhatsApp" style="min-height: 52px; border-color: #34373A; background: #222528; color: #FFFFFF">
+<button type="submit" class="btn b-acc" style="min-height: 52px; grid-column: 1 / -1">Avisame cuando haya algo</button>
+</form>
+</sc-if>
+<sc-if value="{{alertOn}}" hint-placeholder-val="{{ false }}">
+<div class="pop" style="padding: 24px; border-radius: 16px; background: #222528; border: 1px solid #34373A"><b style="font-size: 19px">Listo, quedó guardado.</b><p style="margin: 6px 0 0; color: #B9BCBF">Te escribimos por WhatsApp cuando entre una propiedad que coincida.</p></div>
+</sc-if>
+</div>
+</section>
+
+<footer style="background: #17191B; color: #B9BCBF">
+<div class="wrap" style="padding-top: 72px">
+<div style="font-weight: 800; font-size: clamp(56px, 10vw, 150px); line-height: .9; letter-spacing: -0.06em; color: #FFFFFF">tu<span style="color: #C4532F">inmobiliaria</span></div>
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; margin-top: 48px; padding-bottom: 40px; font-size: 15px">
+<div><p style="margin: 0">Compra, venta, alquiler y tasaciones de propiedades.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Explorar</b><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Contacto</b><span>Dirección de la oficina</span><span>Teléfono y WhatsApp</span><span>Correo electrónico</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Horarios</b><span>Lunes a viernes</span><span>Sábados por la mañana</span></div>
+</div>
+<div style="padding: 18px 0 28px; border-top: 1px solid #2C2F33; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13.5px; color: #7A7F84"><span>Sitio de ejemplo · Modelo 2 · Moderno</span><a href="../index.html" style="color: #E2C27A; text-decoration: none">Diseñado por TomasRamirezDev</a></div>
+</div>
+</footer>
+</div>
+</template>
+<script src="../assets/js/morphdom.min.js"></script>
+<script src="../assets/js/sitio.js"></script>
+<script>
+class Component extends DCLogic {
+  data() {
+    return [
+  { id: 1, op: 'Venta', type: 'Casa', zone: 'Barrio Parque', title: 'Casa moderna en dos plantas con cochera', price: 'USD 165.000', short: 'USD 165k', v: 165000, m2: 220, amb: 5, dorm: 3, banos: 3, img: '../assets/img/casa1-frente.webp', x: 22, y: 30, feats: [{ t: 'Cochera' }, { t: 'Dos plantas' }] },
+  { id: 2, op: 'Alquiler', type: 'Casa', zone: 'Centro', title: 'Casa de 3 ambientes con patio', price: '$ 750.000 / mes', short: '$ 750k', v: 750000, m2: 110, amb: 3, dorm: 2, banos: 1, img: '../assets/img/casa4-frente.webp', x: 52, y: 50, feats: [{ t: 'Patio' }, { t: 'Céntrica' }] },
+  { id: 3, op: 'Venta', type: 'Casa', zone: 'Quintas', title: 'Casa de campo con galería y parque', price: 'USD 140.000', short: 'USD 140k', v: 140000, m2: 260, amb: 4, dorm: 3, banos: 2, img: '../assets/img/casa2-frente.webp', x: 80, y: 24, feats: [{ t: 'Galería' }, { t: 'Parque' }] },
+  { id: 4, op: 'Alquiler', type: 'Departamento', zone: 'Centro', title: 'Departamento a estrenar con mucha luz', price: '$ 620.000 / mes', short: '$ 620k', v: 620000, m2: 65, amb: 3, dorm: 2, banos: 1, img: '../assets/img/casa1-interior.webp', x: 44, y: 63, feats: [{ t: 'A estrenar' }, { t: 'Luminoso' }] },
+  { id: 5, op: 'Venta', type: 'Casa', zone: 'Zona Residencial', title: 'Casa con jardín al frente y parrilla', price: 'USD 98.000', short: 'USD 98k', v: 98000, m2: 140, amb: 4, dorm: 2, banos: 1, img: '../assets/img/casa3-frente.webp', x: 28, y: 78, feats: [{ t: 'Jardín' }, { t: 'Parrilla' }] },
+  { id: 6, op: 'Alquiler', type: 'PH', zone: 'Cerca de la estación', title: 'PH de 3 ambientes al frente', price: '$ 540.000 / mes', short: '$ 540k', v: 540000, m2: 70, amb: 3, dorm: 2, banos: 1, img: '../assets/img/casa3-living.webp', x: 70, y: 76, feats: [{ t: 'Al frente' }, { t: 'Sin expensas' }] }
+];
+  }
+  constructor(props) {
+    super(props);
+    this.state = { op: 'all', type: 'all', amb: 'all', q: '', sort: 'rel', favs: {}, onlyFav: false, hover: null, sel: null, alert: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const q = s.q.trim().toLowerCase();
+    const DATA = this.data();
+    let list = DATA.filter((p) =>
+      (s.op === 'all' || p.op === s.op) &&
+      (s.type === 'all' || p.type === s.type) &&
+      (s.amb === 'all' || (s.amb === '3' ? p.amb === 3 : p.amb >= 4)) &&
+      (!s.onlyFav || s.favs[p.id]) &&
+      (!q || (p.title + ' ' + p.zone + ' ' + p.type).toLowerCase().indexOf(q) !== -1)
+    );
+    const opRank = (p) => (p.op === 'Venta' ? 0 : 1);
+    if (s.sort === 'asc') list = list.slice().sort((a, b) => opRank(a) - opRank(b) || a.v - b.v);
+    if (s.sort === 'desc') list = list.slice().sort((a, b) => opRank(a) - opRank(b) || b.v - a.v);
+    if (s.sort === 'm2') list = list.slice().sort((a, b) => b.m2 - a.m2);
+    const hot = (id) => s.hover === id || s.sel === id;
+    const toggleFav = (id) => (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      const favs = Object.assign({}, s.favs);
+      if (favs[id]) delete favs[id]; else favs[id] = true;
+      this.setState({ favs });
+    };
+    const items = list.map((p) => Object.assign({}, p, {
+      hc: hot(p.id) ? 'hot' : '',
+      tagBg: p.op === 'Venta' ? '#17191B' : '#C4532F',
+      banosLbl: p.banos === 1 ? 'baño' : 'baños',
+      fc: s.favs[p.id] ? 'on' : '',
+      fp: s.favs[p.id] ? 'true' : 'false',
+      toggleFav: toggleFav(p.id),
+      enter: () => { if (this.state.hover !== p.id) this.setState({ hover: p.id }); }
+    }));
+    const pins = list.map((p) => ({
+      x: p.x, y: p.y, short: p.short, title: p.title, price: p.price,
+      pc: hot(p.id) ? 'hot' : '',
+      select: () => this.setState({ sel: this.state.sel === p.id ? null : p.id }),
+      enter: () => { if (this.state.hover !== p.id) this.setState({ hover: p.id }); }
+    }));
+    const selP = list.find((p) => p.id === s.sel) || null;
+    const mk = (cur, key, opts) => opts.map(([k, l]) => ({ label: l, c: cur === k ? 'on' : '', p: cur === k ? 'true' : 'false', pick: () => this.setState({ [key]: k, sel: null }) }));
+    const favCount = Object.keys(s.favs).length;
+    return {
+      ops: mk(s.op, 'op', [['all', 'Todas'], ['Venta', 'Comprar'], ['Alquiler', 'Alquilar']]),
+      types: mk(s.type, 'type', [['all', 'Todos'], ['Casa', 'Casas'], ['Departamento', 'Departamentos'], ['PH', 'PH']]),
+      ambs: mk(s.amb, 'amb', [['all', 'Todos'], ['3', '3'], ['4', '4+']]),
+      items, pins,
+      empty: list.length === 0,
+      countLbl: list.length === 1 ? '1 propiedad' : list.length + ' propiedades',
+      hasSel: !!selP,
+      sel: selP || { img: '', title: '', price: '' },
+      closeSel: () => this.setState({ sel: null }),
+      leave: () => { if (this.state.hover !== null) this.setState({ hover: null }); },
+      q: s.q, sort: s.sort,
+      onQ: (e) => this.setState({ q: e.target.value }),
+      onSort: (e) => this.setState({ sort: e.target.value }),
+      favCount, favC: s.onlyFav ? 'on' : '', favP: s.onlyFav ? 'true' : 'false',
+      toggleOnlyFav: () => this.setState({ onlyFav: !s.onlyFav }),
+      reset: () => this.setState({ op: 'all', type: 'all', amb: 'all', q: '', sort: 'rel', onlyFav: false, sel: null }),
+      alertOff: !s.alert, alertOn: s.alert,
+      sendAlert: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ alert: true }); }
+    };
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

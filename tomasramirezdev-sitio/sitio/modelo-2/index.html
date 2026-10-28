@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicio · Modelo 2 · Moderno | Ejemplo de TomasRamirezDev</title>
+<meta name="description" content="Sitio de ejemplo para inmobiliarias (Modelo 2 · Moderno) diseñado por TomasRamirezDev. Propiedades y precios de muestra.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#17191B">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#F4F3EF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:#17191B}a:hover{color:#C4532F}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.kick{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5C6166}
+.kick b{color:#C4532F;font-weight:800}
+.h2{margin:10px 0 0;font-weight:800;font-size:clamp(30px,3.4vw,46px);line-height:1.04;letter-spacing:-.035em;color:#17191B}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,background-color .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.b-acc{background:#C4532F;color:#fff}.b-acc:hover{background:#A3402A;color:#fff}
+.b-ink{background:#17191B;color:#fff}.b-ink:hover{background:#000;color:#fff}
+.b-line{background:#fff;color:#17191B;border-color:#DAD7CF}.b-line:hover{border-color:#17191B;color:#17191B}
+.b-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}.b-ghost:hover{border-color:#fff;color:#fff}
+.b-white{background:#fff;color:#17191B}.b-white:hover{background:#F4F3EF;color:#17191B}
+.nl{position:relative;display:inline-flex;align-items:center;height:72px;color:#3B3F43;text-decoration:none;font-weight:600;font-size:15px}
+.nl::after{content:"";position:absolute;left:0;right:0;bottom:20px;height:2px;background:#C4532F;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nl:hover{color:#17191B}.nl:hover::after,.nl.on::after{transform:scaleX(1)}
+.nl.on{color:#17191B}
+.tab{position:relative;padding:12px 2px;border:none;background:none;font-family:inherit;font-size:15.5px;font-weight:700;color:#7A7F84;cursor:pointer}
+.tab.on{color:#17191B}
+.tab.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:3px;background:#C4532F}
+.fbox{display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:12px;background:#F4F3EF;font-size:12px;font-weight:700;color:#5C6166;letter-spacing:.02em}
+.fbox input,.fbox select{border:none;background:transparent;padding:2px 0;font-family:inherit;font-size:15.5px;font-weight:600;color:#17191B}
+.fbox:focus-within{box-shadow:0 0 0 2px #17191B}
+.qc{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:999px;border:1px solid #DAD7CF;background:#fff;font-size:14px;font-weight:600;color:#17191B;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s}
+.qc:hover{background:#17191B;color:#fff;border-color:#17191B}
+.pc{display:flex;flex-direction:column;gap:12px;color:#17191B;text-decoration:none}
+.pc:hover{color:#17191B}
+.ph{position:relative;border-radius:16px;overflow:hidden;background:#E6E4DE}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.pc:hover .ph img,.tile:hover img{transform:scale(1.05)}
+.tag{position:absolute;left:12px;top:12px;padding:5px 10px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.tile{position:relative;display:block;border-radius:18px;overflow:hidden;color:#fff;text-decoration:none;background:#17191B}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.tile:hover{color:#fff}
+.zr{display:flex;align-items:center;gap:20px;padding:22px 8px;border-top:1px solid #DAD7CF;color:#17191B;text-decoration:none;transition:background-color .25s,padding .25s}
+.zr:hover{background:#fff;padding-left:20px;color:#17191B}
+.zr .ar{transition:transform .25s}
+.zr:hover .ar{transform:translateX(6px);color:#C4532F}
+.fl a{color:#B9BCBF;text-decoration:none}.fl a:hover{color:#fff}
+.fu{opacity:0;animation:fu .8s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}.d4{animation-delay:.45s}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.mz{opacity:0;animation:mz 1s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes mz{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 35%}@keyframes rv{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #C4532F;outline-offset:2px}
+@media (max-width: 960px){.hide-m{display:none!important}}
+@media (prefers-reduced-motion: reduce){.fu,.rv,.mz{animation:none!important;opacity:1!important;transform:none!important}}
+:root{--mn-r:12px;--mn-bd:#DAD7CF;--mn-bg:#FFFFFF;--mn-fg:#17191B;--mp-bg:#FFFFFF;--mp-bd:#E2E0D9;--mp-fg:#17191B;--mp-hv:#F4F3EF;--mc-bg:#C4532F;--mc-fg:#FFFFFF}
+.mnav{display:none}
+.mnav>summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--mn-r);border:1px solid var(--mn-bd);background:var(--mn-bg);color:var(--mn-fg);cursor:pointer}
+.mnav>summary::-webkit-details-marker{display:none}
+.mnav .i-x{display:none}.mnav[open] .i-x{display:block}.mnav[open] .i-m{display:none}
+.mnav-panel{position:absolute;left:16px;right:16px;top:calc(100% + 8px);display:flex;flex-direction:column;gap:2px;padding:10px;border-radius:18px;background:var(--mp-bg);border:1px solid var(--mp-bd);box-shadow:0 30px 60px -30px rgba(0,0,0,.45);z-index:80;animation:mnav .25s cubic-bezier(.2,.7,.2,1)}
+@keyframes mnav{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mnav-panel a{display:block;padding:13px 14px;border-radius:12px;font-size:16.5px;font-weight:600;color:var(--mp-fg);text-decoration:none}
+.mnav-panel a:hover,.mnav-panel a[aria-current]{background:var(--mp-hv);color:var(--mp-fg)}
+.mnav-panel a.mn-cta{margin-top:6px;text-align:center;background:var(--mc-bg);color:var(--mc-fg)}
+.mnav-panel a.mn-cta:hover{background:var(--mc-bg);color:var(--mc-fg);filter:brightness(.94)}
+@media (max-width: 960px){.mnav{display:block}}
+@media (max-width: 560px){.hide-s{display:none!important}}
+</style>
+<style>#dc-root{min-height:100vh}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #17191B; background: #F4F3EF; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div style="background: #0E2A20; color: #E6ECE7; font-size: 13.5px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+<span><b style="color: #E2C27A">Sitio de ejemplo · Modelo 2 · Moderno.</b> Colores, fotos y secciones se adaptan a cada inmobiliaria.</span>
+<a href="../index.html" style="color: #E2C27A; text-decoration: none; font-weight: 600">← Volver a TomasRamirezDev</a>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #17191B"><svg viewBox="25 110 608 320" width="50" height="26" aria-hidden="true"><path fill="#C4532F" d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z"></path><path fill="#C4532F" d="M475.39 177.601 L618.476 251.256 L618.476 280.193 L475.39 353.849 L475.39 322.72 L542.899 288.523 L581.648 266.601 L581.648 264.848 L542.899 242.926 L475.39 208.729 Z"></path><path fill="#17191B" d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z"></path><path fill="#17191B" d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z"></path></svg><span style="font-weight: 800; font-size: 20px; letter-spacing: -0.03em">tu<span style="color: #C4532F">inmobiliaria</span></span></a>
+<nav class="hide-m" aria-label="Principal" style="display: flex; gap: 32px"><a class="nl on" href="index.html" aria-current="page">Inicio</a><a class="nl" href="propiedades.html">Propiedades</a><a class="nl" href="tasacion.html">Tasaciones</a><a class="nl" href="nosotros.html">Nosotros</a><a class="nl" href="contacto.html">Contacto</a></nav>
+<div style="display: flex; align-items: center; gap: 10px"><a class="btn b-line hide-m" href="contacto.html" style="min-height: 44px; padding: 0 16px"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg>WhatsApp</a><a class="btn b-acc hide-s" href="tasacion.html" style="min-height: 44px">Publicá tu propiedad</a><details class="mnav"><summary aria-label="Menú"><svg class="i-m" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-x" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary><nav class="mnav-panel" aria-label="Menú"><a href="index.html" aria-current="page">Inicio</a><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a class="mn-cta" href="tasacion.html">Publicá tu propiedad</a></nav></details></div>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 56px; padding-bottom: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 48px; align-items: center">
+<div>
+<div class="kick fu d1"><b>●</b> Venta · Alquiler · Tasaciones</div>
+<h1 class="fu d2" style="margin: 16px 0 0; font-weight: 800; font-size: clamp(48px, 6.2vw, 88px); line-height: .96; letter-spacing: -0.05em">Encontrá tu<br>próximo <span style="color: #C4532F">lugar.</span></h1>
+<p class="fu d3" style="margin: 22px 0 0; max-width: 480px; font-size: 18px; color: #5C6166">Casas, departamentos y PH en la zona. Buscá por lo que necesitás o escribinos y te ayudamos a encontrarlo.</p>
+<div class="fu d4" style="margin-top: 30px; padding: 6px 18px 18px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 30px 60px -40px rgba(23,25,27,.45)">
+<div role="tablist" aria-label="Qué querés hacer" style="display: flex; gap: 26px; border-bottom: 1px solid #E2E0D9"><button type="button" role="tab" class="tab on" aria-selected="true" data-on-click="0">Comprar</button><button type="button" role="tab" class="tab " aria-selected="false" data-on-click="1">Alquilar</button><button type="button" role="tab" class="tab " aria-selected="false" data-on-click="2">Tasar</button></div>
+
+<form data-on-submit="3" role="search" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; margin-top: 16px; align-items: stretch">
+<label class="fbox">Ubicación<input type="text" placeholder="Barrio o calle"></label>
+<label class="fbox">Tipo<select><option>Todas</option><option>Casa</option><option>Departamento</option><option>PH</option></select></label>
+<label class="fbox">Ambientes<select><option>Indistinto</option><option>2</option><option>3</option><option>4 o más</option></select></label>
+<a class="btn b-ink" href="propiedades.html" style="min-height: 58px"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg>Buscar</a>
+</form>
+
+
+</div>
+<div class="fu d4" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px"><a class="qc" href="propiedades.html">Casas</a><a class="qc" href="propiedades.html">Departamentos</a><a class="qc" href="propiedades.html">PH</a><a class="qc" href="propiedades.html">Con patio</a><a class="qc" href="propiedades.html">Con cochera</a></div>
+</div>
+<div class="mz" style="display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: 250px 250px; gap: 14px">
+<a href="propiedades.html" class="tile" style="grid-row: span 2"><img src="../assets/img/casa1-angulo.webp" alt="Casa moderna en dos plantas"><span style="position: absolute; left: 14px; right: 14px; bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; border-radius: 14px; background: rgba(255,255,255,.95); color: #17191B"><span style="line-height: 1.3"><span style="font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #C4532F">Nueva</span><br><b>Casa moderna con cochera</b></span><b style="white-space: nowrap">USD 165.000</b></span></a>
+<a href="propiedades.html" class="tile"><img src="../assets/img/casa2-frente.webp" alt="Casa de campo con galería"></a>
+<a href="propiedades.html" class="tile"><img src="../assets/img/casa3-patio.webp" alt="Patio con parrilla"></a>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 30px"><div><div class="kick"><b>01</b> — Propiedades</div><h2 class="h2">Recién publicadas</h2></div><a class="btn b-line" href="propiedades.html">Ver todas las propiedades →</a></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 22px">
+<a class="pc rv" href="ficha.html" style="grid-column: span 2; grid-row: span 2; position: relative; min-height: 560px; border-radius: 20px; overflow: hidden; color: #FFFFFF">
+<img src="../assets/img/casa3-frente.webp" alt="Casa con jardín al frente y parrilla" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.8) 0%, rgba(23,25,27,0) 55%)"></span>
+<span class="tag" style="background: #C4532F; color: #FFFFFF">Destacada</span>
+<span style="position: absolute; left: 24px; right: 24px; bottom: 22px"><span style="font-size: 14px; font-weight: 600; color: #E6E6E2">Casa · Zona Residencial · Venta</span><br><span style="font-weight: 800; font-size: 30px; letter-spacing: -0.03em; line-height: 1.15">Casa con jardín al frente y parrilla</span><br><span style="display: inline-flex; gap: 16px; margin-top: 8px; font-size: 15px; color: #E6E6E2"><b style="color: #FFFFFF; font-size: 18px">USD 98.000</b><span>4 amb.</span><span>140 m²</span></span></span>
+</a>
+
+<a class="pc rv" href="ficha.html">
+<div class="ph" style="aspect-ratio: 4 / 3"><img src="../assets/img/casa1-frente.webp" alt="Casa moderna en dos plantas con cochera"><span class="tag" style="background: #17191B; color: #FFFFFF">Venta</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 19px; letter-spacing: -0.02em">USD 165.000</b><span style="font-weight: 600">Casa moderna en dos plantas con cochera</span><span style="font-size: 14px; color: #5C6166">Barrio Parque · 5 amb. · 220 m²</span></div>
+</a>
+
+<a class="pc rv" href="ficha.html">
+<div class="ph" style="aspect-ratio: 4 / 3"><img src="../assets/img/casa4-frente.webp" alt="Casa de 3 ambientes con patio"><span class="tag" style="background: #C4532F; color: #FFFFFF">Alquiler</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 19px; letter-spacing: -0.02em">$ 750.000 / mes</b><span style="font-weight: 600">Casa de 3 ambientes con patio</span><span style="font-size: 14px; color: #5C6166">Centro · 3 amb. · 110 m²</span></div>
+</a>
+
+<a class="pc rv" href="ficha.html">
+<div class="ph" style="aspect-ratio: 4 / 3"><img src="../assets/img/casa2-frente.webp" alt="Casa de campo con galería y parque"><span class="tag" style="background: #17191B; color: #FFFFFF">Venta</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 19px; letter-spacing: -0.02em">USD 140.000</b><span style="font-weight: 600">Casa de campo con galería y parque</span><span style="font-size: 14px; color: #5C6166">Quintas · 4 amb. · 260 m²</span></div>
+</a>
+
+<a class="pc rv" href="ficha.html">
+<div class="ph" style="aspect-ratio: 4 / 3"><img src="../assets/img/casa1-interior.webp" alt="Departamento a estrenar con mucha luz"><span class="tag" style="background: #C4532F; color: #FFFFFF">Alquiler</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 19px; letter-spacing: -0.02em">$ 620.000 / mes</b><span style="font-weight: 600">Departamento a estrenar con mucha luz</span><span style="font-size: 14px; color: #5C6166">Centro · 3 amb. · 65 m²</span></div>
+</a>
+
+</div>
+<p style="margin: 18px 0 0; font-size: 13.5px; color: #7A7F84">Propiedades y precios de ejemplo.</p>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div class="rv" style="margin-bottom: 28px"><div class="kick"><b>02</b> — Explorá</div><h2 class="h2">¿Qué estás buscando?</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px">
+<a class="tile rv" href="propiedades.html" style="height: 300px"><img src="../assets/img/casa1-frente.webp" alt=""><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.75), rgba(23,25,27,0) 60%)"></span><span style="position: absolute; left: 20px; bottom: 18px"><b style="font-size: 22px; letter-spacing: -0.02em">Casas</b><br><span style="font-size: 14px; color: #E6E6E2">4 propiedades</span></span></a>
+<a class="tile rv" href="propiedades.html" style="height: 300px"><img src="../assets/img/casa1-interior.webp" alt=""><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.75), rgba(23,25,27,0) 60%)"></span><span style="position: absolute; left: 20px; bottom: 18px"><b style="font-size: 22px; letter-spacing: -0.02em">Departamentos</b><br><span style="font-size: 14px; color: #E6E6E2">1 propiedad</span></span></a>
+<a class="tile rv" href="propiedades.html" style="height: 300px"><img src="../assets/img/casa3-living.webp" alt=""><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.75), rgba(23,25,27,0) 60%)"></span><span style="position: absolute; left: 20px; bottom: 18px"><b style="font-size: 22px; letter-spacing: -0.02em">PH</b><br><span style="font-size: 14px; color: #E6E6E2">1 propiedad</span></span></a>
+<a class="tile rv" href="propiedades.html" style="height: 300px"><img src="../assets/img/casa4-patio.webp" alt=""><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.75), rgba(23,25,27,0) 60%)"></span><span style="position: absolute; left: 20px; bottom: 18px"><b style="font-size: 22px; letter-spacing: -0.02em">Con patio o jardín</b><br><span style="font-size: 14px; color: #E6E6E2">4 propiedades</span></span></a>
+</div>
+</section>
+
+<section style="background: #17191B; color: #FFFFFF">
+<div class="wrap" style="padding-top: 96px; padding-bottom: 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 56px; align-items: center">
+<div class="rv">
+<div class="kick" style="color: #B9BCBF"><b>03</b> — Para propietarios</div>
+<h2 class="h2" style="color: #FFFFFF">Vendé o alquilá tu propiedad sin vueltas.</h2>
+<div style="margin-top: 32px; border-top: 1px solid #34373A">
+<div style="display: flex; gap: 24px; padding: 22px 0; border-bottom: 1px solid #34373A"><span style="font-weight: 800; font-size: 30px; letter-spacing: -0.03em; color: #C4532F">01</span><span><b style="font-size: 18px">Tasamos tu propiedad</b><br><span style="color: #B9BCBF">Con un valor real, basado en propiedades parecidas de la zona.</span></span></div>
+<div style="display: flex; gap: 24px; padding: 22px 0; border-bottom: 1px solid #34373A"><span style="font-weight: 800; font-size: 30px; letter-spacing: -0.03em; color: #C4532F">02</span><span><b style="font-size: 18px">La publicamos bien</b><br><span style="color: #B9BCBF">Fotos cuidadas, una descripción clara y presencia en los portales.</span></span></div>
+<div style="display: flex; gap: 24px; padding: 22px 0; border-bottom: 1px solid #34373A"><span style="font-weight: 800; font-size: 30px; letter-spacing: -0.03em; color: #C4532F">03</span><span><b style="font-size: 18px">Te acompañamos hasta el final</b><br><span style="color: #B9BCBF">Visitas, ofertas y papeles: estamos en cada paso.</span></span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px"><a class="btn b-acc" href="tasacion.html">Publicá tu propiedad</a><a class="btn b-ghost" href="nosotros.html">Conocé cómo trabajamos</a></div>
+</div>
+<div class="rv" style="position: relative; height: 560px; border-radius: 22px; overflow: hidden"><img src="../assets/img/casa2-living.webp" alt="Living con chimenea" style="width: 100%; height: 100%; object-fit: cover"><span style="position: absolute; left: 18px; bottom: 18px; padding: 14px 18px; border-radius: 14px; background: #FFFFFF; color: #17191B"><span style="font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #C4532F">Te acompañamos</span><br><b>Desde la tasación hasta la escritura</b></span></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-top: 96px; padding-bottom: 96px">
+<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 26px"><div><div class="kick"><b>04</b> — Zonas</div><h2 class="h2">Dónde trabajamos</h2></div><p style="margin: 0; max-width: 380px; color: #5C6166">Cada inmobiliaria muestra acá los barrios que mejor conoce.</p></div>
+<div class="rv" style="border-bottom: 1px solid #DAD7CF">
+<a class="zr" href="propiedades.html"><span style="font-weight: 800; font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.03em; flex: 1">Barrio Parque</span><span style="font-size: 14.5px; color: #5C6166">1 propiedad</span><span class="ar" aria-hidden="true" style="font-size: 22px">→</span></a><a class="zr" href="propiedades.html"><span style="font-weight: 800; font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.03em; flex: 1">Centro</span><span style="font-size: 14.5px; color: #5C6166">2 propiedades</span><span class="ar" aria-hidden="true" style="font-size: 22px">→</span></a><a class="zr" href="propiedades.html"><span style="font-weight: 800; font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.03em; flex: 1">Cerca de la estación</span><span style="font-size: 14.5px; color: #5C6166">1 propiedad</span><span class="ar" aria-hidden="true" style="font-size: 22px">→</span></a><a class="zr" href="propiedades.html"><span style="font-weight: 800; font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.03em; flex: 1">Quintas</span><span style="font-size: 14.5px; color: #5C6166">1 propiedad</span><span class="ar" aria-hidden="true" style="font-size: 22px">→</span></a><a class="zr" href="propiedades.html"><span style="font-weight: 800; font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.03em; flex: 1">Zona Residencial</span><span style="font-size: 14.5px; color: #5C6166">1 propiedad</span><span class="ar" aria-hidden="true" style="font-size: 22px">→</span></a>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div class="rv" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding: 44px 48px; border-radius: 24px; background: #C4532F; color: #FFFFFF">
+<div><h2 style="margin: 0; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); letter-spacing: -0.035em; line-height: 1.05">¿Cuánto vale tu casa?</h2><p style="margin: 10px 0 0; font-size: 17px; color: #FBE3DA">Pedí una tasación online en 4 pasos. Sin compromiso.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px"><a class="btn b-white" href="tasacion.html">Empezar tasación →</a><a class="btn b-ghost" href="contacto.html">Escribinos por WhatsApp</a></div>
+</div>
+</section>
+
+<footer style="background: #17191B; color: #B9BCBF">
+<div class="wrap" style="padding-top: 72px">
+<div style="font-weight: 800; font-size: clamp(56px, 10vw, 150px); line-height: .9; letter-spacing: -0.06em; color: #FFFFFF">tu<span style="color: #C4532F">inmobiliaria</span></div>
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; margin-top: 48px; padding-bottom: 40px; font-size: 15px">
+<div><p style="margin: 0">Compra, venta, alquiler y tasaciones de propiedades.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Explorar</b><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Contacto</b><span>Dirección de la oficina</span><span>Teléfono y WhatsApp</span><span>Correo electrónico</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Horarios</b><span>Lunes a viernes</span><span>Sábados por la mañana</span></div>
+</div>
+<div style="padding: 18px 0 28px; border-top: 1px solid #2C2F33; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13.5px; color: #7A7F84"><span>Sitio de ejemplo · Modelo 2 · Moderno</span><a href="../index.html" style="color: #E2C27A; text-decoration: none">Diseñado por TomasRamirezDev</a></div>
+</div>
+</footer>
+</div>
+</div>
+<template id="dc-tpl">
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #17191B; background: #F4F3EF; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div style="background: #0E2A20; color: #E6ECE7; font-size: 13.5px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+<span><b style="color: #E2C27A">Sitio de ejemplo · Modelo 2 · Moderno.</b> Colores, fotos y secciones se adaptan a cada inmobiliaria.</span>
+<a href="../index.html" style="color: #E2C27A; text-decoration: none; font-weight: 600">← Volver a TomasRamirezDev</a>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #17191B"><svg viewBox="25 110 608 320" width="50" height="26" aria-hidden="true"><path fill="#C4532F" d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z"></path><path fill="#C4532F" d="M475.39 177.601 L618.476 251.256 L618.476 280.193 L475.39 353.849 L475.39 322.72 L542.899 288.523 L581.648 266.601 L581.648 264.848 L542.899 242.926 L475.39 208.729 Z"></path><path fill="#17191B" d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z"></path><path fill="#17191B" d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z"></path></svg><span style="font-weight: 800; font-size: 20px; letter-spacing: -0.03em">tu<span style="color: #C4532F">inmobiliaria</span></span></a>
+<nav class="hide-m" aria-label="Principal" style="display: flex; gap: 32px"><a class="nl on" href="index.html" aria-current="page">Inicio</a><a class="nl" href="propiedades.html">Propiedades</a><a class="nl" href="tasacion.html">Tasaciones</a><a class="nl" href="nosotros.html">Nosotros</a><a class="nl" href="contacto.html">Contacto</a></nav>
+<div style="display: flex; align-items: center; gap: 10px"><a class="btn b-line hide-m" href="contacto.html" style="min-height: 44px; padding: 0 16px"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg>WhatsApp</a><a class="btn b-acc hide-s" href="tasacion.html" style="min-height: 44px">Publicá tu propiedad</a><details class="mnav"><summary aria-label="Menú"><svg class="i-m" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-x" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary><nav class="mnav-panel" aria-label="Menú"><a href="index.html" aria-current="page">Inicio</a><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a class="mn-cta" href="tasacion.html">Publicá tu propiedad</a></nav></details></div>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 56px; padding-bottom: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 48px; align-items: center">
+<div>
+<div class="kick fu d1"><b>●</b> Venta · Alquiler · Tasaciones</div>
+<h1 class="fu d2" style="margin: 16px 0 0; font-weight: 800; font-size: clamp(48px, 6.2vw, 88px); line-height: .96; letter-spacing: -0.05em">Encontrá tu<br>próximo <span style="color: #C4532F">lugar.</span></h1>
+<p class="fu d3" style="margin: 22px 0 0; max-width: 480px; font-size: 18px; color: #5C6166">Casas, departamentos y PH en la zona. Buscá por lo que necesitás o escribinos y te ayudamos a encontrarlo.</p>
+<div class="fu d4" style="margin-top: 30px; padding: 6px 18px 18px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 30px 60px -40px rgba(23,25,27,.45)">
+<div role="tablist" aria-label="Qué querés hacer" style="display: flex; gap: 26px; border-bottom: 1px solid #E2E0D9"><sc-for list="{{tabs}}" as="t" hint-placeholder-count="3"><button type="button" role="tab" class="tab {{t.c}}" aria-selected="{{t.p}}" onClick="{{t.pick}}">{{t.label}}</button></sc-for></div>
+<sc-if value="{{isSearch}}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{noop}}" role="search" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; margin-top: 16px; align-items: stretch">
+<label class="fbox">Ubicación<input type="text" placeholder="Barrio o calle"></label>
+<label class="fbox">Tipo<select><option>Todas</option><option>Casa</option><option>Departamento</option><option>PH</option></select></label>
+<label class="fbox">Ambientes<select><option>Indistinto</option><option>2</option><option>3</option><option>4 o más</option></select></label>
+<a class="btn b-ink" href="propiedades.html" style="min-height: 58px"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg>{{searchLbl}}</a>
+</form>
+</sc-if>
+<sc-if value="{{isTasar}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 16px; padding: 14px 16px; border-radius: 14px; background: #F9E7E1"><span style="font-size: 15.5px"><b>Tasación online en 4 pasos.</b><br><span style="color: #5C6166">Te respondemos con un valor de mercado.</span></span><a class="btn b-acc" href="tasacion.html">Empezar →</a></div>
+</sc-if>
+</div>
+<div class="fu d4" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px"><a class="qc" href="propiedades.html">Casas</a><a class="qc" href="propiedades.html">Departamentos</a><a class="qc" href="propiedades.html">PH</a><a class="qc" href="propiedades.html">Con patio</a><a class="qc" href="propiedades.html">Con cochera</a></div>
+</div>
+<div class="mz" style="display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: 250px 250px; gap: 14px">
+<a href="propiedades.html" class="tile" style="grid-row: span 2"><img src="../assets/img/casa1-angulo.webp" alt="Casa moderna en dos plantas"><span style="position: absolute; left: 14px; right: 14px; bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; border-radius: 14px; background: rgba(255,255,255,.95); color: #17191B"><span style="line-height: 1.3"><span style="font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #C4532F">Nueva</span><br><b>Casa moderna con cochera</b></span><b style="white-space: nowrap">USD 165.000</b></span></a>
+<a href="propiedades.html" class="tile"><img src="../assets/img/casa2-frente.webp" alt="Casa de campo con galería"></a>
+<a href="propiedades.html" class="tile"><img src="../assets/img/casa3-patio.webp" alt="Patio con parrilla"></a>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 30px"><div><div class="kick"><b>01</b> — Propiedades</div><h2 class="h2">Recién publicadas</h2></div><a class="btn b-line" href="propiedades.html">Ver todas las propiedades →</a></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 22px">
+<a class="pc rv" href="ficha.html" style="grid-column: span 2; grid-row: span 2; position: relative; min-height: 560px; border-radius: 20px; overflow: hidden; color: #FFFFFF">
+<img src="../assets/img/casa3-frente.webp" alt="Casa con jardín al frente y parrilla" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.8) 0%, rgba(23,25,27,0) 55%)"></span>
+<span class="tag" style="background: #C4532F; color: #FFFFFF">Destacada</span>
+<span style="position: absolute; left: 24px; right: 24px; bottom: 22px"><span style="font-size: 14px; font-weight: 600; color: #E6E6E2">Casa · Zona Residencial · Venta</span><br><span style="font-weight: 800; font-size: 30px; letter-spacing: -0.03em; line-height: 1.15">Casa con jardín al frente y parrilla</span><br><span style="display: inline-flex; gap: 16px; margin-top: 8px; font-size: 15px; color: #E6E6E2"><b style="color: #FFFFFF; font-size: 18px">USD 98.000</b><span>4 amb.</span><span>140 m²</span></span></span>
+</a>
+<sc-for list="{{props}}" as="p" hint-placeholder-count="4">
+<a class="pc rv" href="ficha.html">
+<div class="ph" style="aspect-ratio: 4 / 3"><img src="{{p.img}}" alt="{{p.title}}"><span class="tag" style="background: {{p.tagBg}}; color: #FFFFFF">{{p.op}}</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 19px; letter-spacing: -0.02em">{{p.price}}</b><span style="font-weight: 600">{{p.title}}</span><span style="font-size: 14px; color: #5C6166">{{p.zone}} · {{p.amb}} amb. · {{p.m2}} m²</span></div>
+</a>
+</sc-for>
+</div>
+<p style="margin: 18px 0 0; font-size: 13.5px; color: #7A7F84">Propiedades y precios de ejemplo.</p>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div class="rv" style="margin-bottom: 28px"><div class="kick"><b>02</b> — Explorá</div><h2 class="h2">¿Qué estás buscando?</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px">
+<a class="tile rv" href="propiedades.html" style="height: 300px"><img src="../assets/img/casa1-frente.webp" alt=""><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.75), rgba(23,25,27,0) 60%)"></span><span style="position: absolute; left: 20px; bottom: 18px"><b style="font-size: 22px; letter-spacing: -0.02em">Casas</b><br><span style="font-size: 14px; color: #E6E6E2">4 propiedades</span></span></a>
+<a class="tile rv" href="propiedades.html" style="height: 300px"><img src="../assets/img/casa1-interior.webp" alt=""><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.75), rgba(23,25,27,0) 60%)"></span><span style="position: absolute; left: 20px; bottom: 18px"><b style="font-size: 22px; letter-spacing: -0.02em">Departamentos</b><br><span style="font-size: 14px; color: #E6E6E2">1 propiedad</span></span></a>
+<a class="tile rv" href="propiedades.html" style="height: 300px"><img src="../assets/img/casa3-living.webp" alt=""><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.75), rgba(23,25,27,0) 60%)"></span><span style="position: absolute; left: 20px; bottom: 18px"><b style="font-size: 22px; letter-spacing: -0.02em">PH</b><br><span style="font-size: 14px; color: #E6E6E2">1 propiedad</span></span></a>
+<a class="tile rv" href="propiedades.html" style="height: 300px"><img src="../assets/img/casa4-patio.webp" alt=""><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,27,.75), rgba(23,25,27,0) 60%)"></span><span style="position: absolute; left: 20px; bottom: 18px"><b style="font-size: 22px; letter-spacing: -0.02em">Con patio o jardín</b><br><span style="font-size: 14px; color: #E6E6E2">4 propiedades</span></span></a>
+</div>
+</section>
+
+<section style="background: #17191B; color: #FFFFFF">
+<div class="wrap" style="padding-top: 96px; padding-bottom: 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 56px; align-items: center">
+<div class="rv">
+<div class="kick" style="color: #B9BCBF"><b>03</b> — Para propietarios</div>
+<h2 class="h2" style="color: #FFFFFF">Vendé o alquilá tu propiedad sin vueltas.</h2>
+<div style="margin-top: 32px; border-top: 1px solid #34373A">
+<div style="display: flex; gap: 24px; padding: 22px 0; border-bottom: 1px solid #34373A"><span style="font-weight: 800; font-size: 30px; letter-spacing: -0.03em; color: #C4532F">01</span><span><b style="font-size: 18px">Tasamos tu propiedad</b><br><span style="color: #B9BCBF">Con un valor real, basado en propiedades parecidas de la zona.</span></span></div>
+<div style="display: flex; gap: 24px; padding: 22px 0; border-bottom: 1px solid #34373A"><span style="font-weight: 800; font-size: 30px; letter-spacing: -0.03em; color: #C4532F">02</span><span><b style="font-size: 18px">La publicamos bien</b><br><span style="color: #B9BCBF">Fotos cuidadas, una descripción clara y presencia en los portales.</span></span></div>
+<div style="display: flex; gap: 24px; padding: 22px 0; border-bottom: 1px solid #34373A"><span style="font-weight: 800; font-size: 30px; letter-spacing: -0.03em; color: #C4532F">03</span><span><b style="font-size: 18px">Te acompañamos hasta el final</b><br><span style="color: #B9BCBF">Visitas, ofertas y papeles: estamos en cada paso.</span></span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px"><a class="btn b-acc" href="tasacion.html">Publicá tu propiedad</a><a class="btn b-ghost" href="nosotros.html">Conocé cómo trabajamos</a></div>
+</div>
+<div class="rv" style="position: relative; height: 560px; border-radius: 22px; overflow: hidden"><img src="../assets/img/casa2-living.webp" alt="Living con chimenea" style="width: 100%; height: 100%; object-fit: cover"><span style="position: absolute; left: 18px; bottom: 18px; padding: 14px 18px; border-radius: 14px; background: #FFFFFF; color: #17191B"><span style="font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #C4532F">Te acompañamos</span><br><b>Desde la tasación hasta la escritura</b></span></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-top: 96px; padding-bottom: 96px">
+<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 26px"><div><div class="kick"><b>04</b> — Zonas</div><h2 class="h2">Dónde trabajamos</h2></div><p style="margin: 0; max-width: 380px; color: #5C6166">Cada inmobiliaria muestra acá los barrios que mejor conoce.</p></div>
+<div class="rv" style="border-bottom: 1px solid #DAD7CF">
+<sc-for list="{{zones}}" as="z" hint-placeholder-count="5"><a class="zr" href="propiedades.html"><span style="font-weight: 800; font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.03em; flex: 1">{{z.name}}</span><span style="font-size: 14.5px; color: #5C6166">{{z.n}}</span><span class="ar" aria-hidden="true" style="font-size: 22px">→</span></a></sc-for>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div class="rv" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding: 44px 48px; border-radius: 24px; background: #C4532F; color: #FFFFFF">
+<div><h2 style="margin: 0; font-weight: 800; font-size: clamp(30px, 3.6vw, 48px); letter-spacing: -0.035em; line-height: 1.05">¿Cuánto vale tu casa?</h2><p style="margin: 10px 0 0; font-size: 17px; color: #FBE3DA">Pedí una tasación online en 4 pasos. Sin compromiso.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px"><a class="btn b-white" href="tasacion.html">Empezar tasación →</a><a class="btn b-ghost" href="contacto.html">Escribinos por WhatsApp</a></div>
+</div>
+</section>
+
+<footer style="background: #17191B; color: #B9BCBF">
+<div class="wrap" style="padding-top: 72px">
+<div style="font-weight: 800; font-size: clamp(56px, 10vw, 150px); line-height: .9; letter-spacing: -0.06em; color: #FFFFFF">tu<span style="color: #C4532F">inmobiliaria</span></div>
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; margin-top: 48px; padding-bottom: 40px; font-size: 15px">
+<div><p style="margin: 0">Compra, venta, alquiler y tasaciones de propiedades.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Explorar</b><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Contacto</b><span>Dirección de la oficina</span><span>Teléfono y WhatsApp</span><span>Correo electrónico</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Horarios</b><span>Lunes a viernes</span><span>Sábados por la mañana</span></div>
+</div>
+<div style="padding: 18px 0 28px; border-top: 1px solid #2C2F33; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13.5px; color: #7A7F84"><span>Sitio de ejemplo · Modelo 2 · Moderno</span><a href="../index.html" style="color: #E2C27A; text-decoration: none">Diseñado por TomasRamirezDev</a></div>
+</div>
+</footer>
+</div>
+</template>
+<script src="../assets/js/morphdom.min.js"></script>
+<script src="../assets/js/sitio.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'comprar' }; }
+  renderVals() {
+    const t = this.state.tab;
+    const tabs = [['comprar', 'Comprar'], ['alquilar', 'Alquilar'], ['tasar', 'Tasar']].map(([k, l]) => ({ label: l, c: t === k ? 'on' : '', p: t === k ? 'true' : 'false', pick: () => this.setState({ tab: k }) }));
+    const props = [
+      { op: 'Venta', price: 'USD 165.000', title: 'Casa moderna en dos plantas con cochera', zone: 'Barrio Parque', amb: 5, m2: 220, img: '../assets/img/casa1-frente.webp' },
+      { op: 'Alquiler', price: '$ 750.000 / mes', title: 'Casa de 3 ambientes con patio', zone: 'Centro', amb: 3, m2: 110, img: '../assets/img/casa4-frente.webp' },
+      { op: 'Venta', price: 'USD 140.000', title: 'Casa de campo con galería y parque', zone: 'Quintas', amb: 4, m2: 260, img: '../assets/img/casa2-frente.webp' },
+      { op: 'Alquiler', price: '$ 620.000 / mes', title: 'Departamento a estrenar con mucha luz', zone: 'Centro', amb: 3, m2: 65, img: '../assets/img/casa1-interior.webp' }
+    ].map((p) => Object.assign({}, p, { tagBg: p.op === 'Venta' ? '#17191B' : '#C4532F' }));
+    const zones = [['Barrio Parque', '1 propiedad'], ['Centro', '2 propiedades'], ['Cerca de la estación', '1 propiedad'], ['Quintas', '1 propiedad'], ['Zona Residencial', '1 propiedad']].map(([name, n]) => ({ name, n }));
+    return {
+      tabs, props, zones,
+      isSearch: t !== 'tasar', isTasar: t === 'tasar',
+      searchLbl: t === 'alquilar' ? 'Buscar alquileres' : 'Buscar',
+      noop: (e) => { if (e && e.preventDefault) e.preventDefault(); }
+    };
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

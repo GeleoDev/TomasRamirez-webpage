@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · Modelo 1 · Clásico | Ejemplo de TomasRamirezDev</title>
+<meta name="description" content="Sitio de ejemplo para inmobiliarias (Modelo 1 · Clásico) diseñado por TomasRamirezDev. Propiedades y precios de muestra.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#173B29">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FAF6EF}
+*{box-sizing:border-box}
+a{color:#156B37}a:hover{color:#173B29}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:400;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .25s,background-color .25s,color .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
+.b-green{background:#12924A;color:#fff}.b-green:hover{background:#0F7E3F;color:#fff}
+.b-dark{background:#173B29;color:#FAF6EF}.b-dark:hover{background:#0F2A1D;color:#FAF6EF}
+.b-light{background:#fff;color:#173B29;border-color:#E6DED1}.b-light:hover{border-color:#173B29;color:#173B29}
+.b-glass{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4)}.b-glass:hover{background:rgba(255,255,255,.26);color:#fff}
+.nl{padding:8px 14px;border-radius:999px;color:#22302A;text-decoration:none;font-weight:500;font-size:15px;transition:background-color .2s,color .2s}
+.nl:hover{background:#F1EBDF;color:#22302A}
+.nl.on{background:#E1F2E5;color:#156B37}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #E1D8C8;background:#fff;font-family:inherit;font-size:14.5px;color:#22302A;cursor:pointer;transition:background-color .2s,border-color .2s,color .2s}
+.chip:hover{border-color:#12924A}
+.chip.on{background:#E1F2E5;border-color:#BFE2C9;color:#156B37;font-weight:600}
+.fld{width:100%;min-height:50px;padding:0 14px;border-radius:12px;border:1px solid #E1D8C8;background:#fff;font-family:inherit;font-size:15.5px;color:#22302A}
+.fld:focus{outline:none;border-color:#12924A;box-shadow:0 0 0 4px rgba(18,146,74,.12)}
+.lbl{display:flex;flex-direction:column;gap:6px;font-size:13.5px;font-weight:600;color:#22302A}
+.seg{min-height:40px;padding:0 18px;border-radius:999px;border:none;background:transparent;font-family:inherit;font-size:14.5px;font-weight:600;color:#5B6760;cursor:pointer;transition:background-color .25s,color .25s,box-shadow .25s}
+.seg.on{background:#fff;color:#173B29;box-shadow:0 4px 14px -6px rgba(34,48,42,.35)}
+.cc{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:22px;background:#fff;color:#22302A;text-decoration:none;box-shadow:0 12px 30px -24px rgba(34,48,42,.45);transition:transform .25s}
+.cc:hover{transform:translateY(-3px);color:#22302A}
+.ci{flex:none;width:44px;height:44px;border-radius:99px;display:flex;align-items:center;justify-content:center}
+.soc{width:44px;height:44px;border-radius:99px;background:#fff;color:#173B29;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -14px rgba(34,48,42,.45)}
+.fl a{color:#C9D9CE;text-decoration:none}.fl a:hover{color:#fff}
+.fu{opacity:0;animation:fu .8s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}
+@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #12924A;outline-offset:2px}
+@media (max-width: 960px){.hide-m{display:none!important}}
+@media (prefers-reduced-motion: reduce){.fu{animation:none!important;opacity:1!important;transform:none!important}}
+:root{--mn-r:99px;--mn-bd:#E1F2E5;--mn-bg:#E1F2E5;--mn-fg:#173B29;--mp-bg:#FFFFFF;--mp-bd:#EFE7DA;--mp-fg:#173B29;--mp-hv:#E1F2E5;--mc-bg:#12924A;--mc-fg:#FFFFFF}
+.mnav{display:none}
+.mnav>summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--mn-r);border:1px solid var(--mn-bd);background:var(--mn-bg);color:var(--mn-fg);cursor:pointer}
+.mnav>summary::-webkit-details-marker{display:none}
+.mnav .i-x{display:none}.mnav[open] .i-x{display:block}.mnav[open] .i-m{display:none}
+.mnav-panel{position:absolute;left:16px;right:16px;top:calc(100% + 8px);display:flex;flex-direction:column;gap:2px;padding:10px;border-radius:18px;background:var(--mp-bg);border:1px solid var(--mp-bd);box-shadow:0 30px 60px -30px rgba(0,0,0,.45);z-index:80;animation:mnav .25s cubic-bezier(.2,.7,.2,1)}
+@keyframes mnav{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mnav-panel a{display:block;padding:13px 14px;border-radius:12px;font-size:16.5px;font-weight:600;color:var(--mp-fg);text-decoration:none}
+.mnav-panel a:hover,.mnav-panel a[aria-current]{background:var(--mp-hv);color:var(--mp-fg)}
+.mnav-panel a.mn-cta{margin-top:6px;text-align:center;background:var(--mc-bg);color:var(--mc-fg)}
+.mnav-panel a.mn-cta:hover{background:var(--mc-bg);color:var(--mc-fg);filter:brightness(.94)}
+@media (max-width: 960px){.mnav{display:block}}
+@media (max-width: 560px){.hide-s{display:none!important}}
+</style>
+<style>#dc-root{min-height:100vh}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="font-family: 'Figtree', sans-serif; color: #22302A; background: #FAF6EF; font-size: 16.5px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div style="background: #0E2A20; color: #E6ECE7; font-size: 13.5px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+<span><b style="color: #E2C27A">Sitio de ejemplo · Modelo 1 · Clásico.</b> Colores, fotos y secciones se adaptan a cada inmobiliaria.</span>
+<a href="../index.html" style="color: #E2C27A; text-decoration: none; font-weight: 600">← Volver a TomasRamirezDev</a>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 40; padding: 12px 0; background: rgba(250,246,239,.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px)">
+<div class="wrap">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 8px 8px 8px 18px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 14px 40px -26px rgba(34,48,42,.45)">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none"><svg viewBox="25 110 608 320" width="50" height="26" aria-hidden="true"><path fill="#12924A" d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z"></path><path fill="#12924A" d="M475.39 177.601 L618.476 251.256 L618.476 280.193 L475.39 353.849 L475.39 322.72 L542.899 288.523 L581.648 266.601 L581.648 264.848 L542.899 242.926 L475.39 208.729 Z"></path><path fill="#173B29" d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z"></path><path fill="#173B29" d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z"></path></svg><span class="serif" style="font-size: 20px; color: #173B29">Tu Inmobiliaria</span></a>
+<nav class="hide-m" aria-label="Principal" style="display: flex; gap: 4px"><a class="nl" href="index.html">Inicio</a><a class="nl" href="nosotros.html">Nosotros</a><a class="nl" href="propiedades.html">Propiedades</a><a class="nl" href="tasacion.html">Tasaciones</a><a class="nl on" href="contacto.html" aria-current="page">Contacto</a></nav>
+<div style="display: flex; align-items: center; gap: 8px"><a href="contacto.html" aria-label="WhatsApp" style="width: 44px; height: 44px; border-radius: 99px; background: #E1F2E5; color: #156B37; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg></a><a class="btn b-green hide-s" href="tasacion.html" style="min-height: 44px">Tasar mi propiedad</a><details class="mnav"><summary aria-label="Menú"><svg class="i-m" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-x" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary><nav class="mnav-panel" aria-label="Menú"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="contacto.html" aria-current="page">Contacto</a><a class="mn-cta" href="tasacion.html">Tasar mi propiedad</a></nav></details></div>
+</div>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 40px">
+<nav class="fu d1" aria-label="Ruta" style="font-size: 14px; color: #6B756F"><a href="index.html" style="color: #6B756F; text-decoration: none">Inicio</a> › Contacto</nav>
+<h1 class="serif fu d2" style="margin: 10px 0 0; font-size: clamp(46px, 5.4vw, 72px); line-height: 1; color: #173B29">Contacto</h1>
+<p class="fu d3" style="margin: 14px 0 0; max-width: 560px; color: #5B6760; font-size: 18px">Escribinos por WhatsApp, llamanos o completá el formulario. Si te interesa una propiedad, podés elegirla abajo.</p>
+</section>
+
+<section class="wrap" style="padding-top: 36px; padding-bottom: 90px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<div class="fu d2" style="flex: 2 1 560px; padding: 30px; border-radius: 28px; background: #FFFFFF; box-shadow: 0 30px 70px -44px rgba(34,48,42,.5)">
+
+
+<form data-on-submit="0" style="display: flex; flex-direction: column; gap: 18px">
+<div><div class="lbl" style="margin-bottom: 10px">¿En qué te podemos ayudar?</div><div role="group" aria-label="Motivo" style="display: flex; flex-wrap: wrap; gap: 8px"><button type="button" class="chip on" aria-pressed="true" data-on-click="1">Comprar</button><button type="button" class="chip " aria-pressed="false" data-on-click="2">Alquilar</button><button type="button" class="chip " aria-pressed="false" data-on-click="3">Vender</button><button type="button" class="chip " aria-pressed="false" data-on-click="4">Tasar</button><button type="button" class="chip " aria-pressed="false" data-on-click="5">Administración</button><button type="button" class="chip " aria-pressed="false" data-on-click="6">Otra consulta</button></div></div>
+<label class="lbl">Propiedad que te interesa <span style="font-weight: 400; color: #8A938D">(opcional)</span><span style="position: relative; display: block"><span style="position: absolute; left: 13px; top: 15px; color: #8A938D"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg></span><input class="fld" type="search" placeholder="Buscá por nombre o barrio" style="padding-left: 40px"></span></label>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 14px"><label class="lbl">Nombre y apellido<input class="fld" type="text" autocomplete="name"></label><label class="lbl">Teléfono / WhatsApp<input class="fld" type="tel" autocomplete="tel" placeholder="11 1234-5678"></label></div>
+<label class="lbl">Email<input class="fld" type="email" autocomplete="email" placeholder="tu@email.com"></label>
+<label class="lbl">Mensaje<textarea class="fld" rows="4" placeholder="Contanos qué estás buscando." style="padding: 12px 14px; min-height: 120px; resize: vertical"></textarea></label>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px">
+<div><div class="lbl" style="margin-bottom: 8px">Te respondemos por</div><div role="group" aria-label="Medio de respuesta" style="display: flex; padding: 4px; border-radius: 999px; background: #F2EADD"><button type="button" class="seg on" aria-pressed="true" data-on-click="7">WhatsApp</button><button type="button" class="seg " aria-pressed="false" data-on-click="8">Llamada</button><button type="button" class="seg " aria-pressed="false" data-on-click="9">Email</button></div></div>
+<button type="submit" class="btn b-dark">Enviar mensaje</button>
+</div>
+</form>
+
+</div>
+
+<aside class="fu d3" style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+<a class="cc" href="#" style="background: #12924A; color: #FFFFFF"><span class="ci" style="background: rgba(255,255,255,.2)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg></span><span style="flex: 1; line-height: 1.35"><span style="font-size: 13px; opacity: .85">WhatsApp</span><br><b>Número de WhatsApp</b></span><span aria-hidden="true">→</span></a>
+<a class="cc" href="#"><span class="ci" style="background: #F8E7DA; color: #156B37"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6.9 6.9l1.5-2.3L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2Z"></path></svg></span><span style="line-height: 1.35"><span style="font-size: 13px; color: #6B756F">Teléfono</span><br><b>Teléfono de la oficina</b></span></a>
+<a class="cc" href="#"><span class="ci" style="background: #E1F2E5; color: #156B37"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M4 7l8 6 8-6"></path></svg></span><span style="line-height: 1.35"><span style="font-size: 13px; color: #6B756F">Email</span><br><b>correo@tuinmobiliaria.com</b></span></a>
+<div style="padding: 10px; border-radius: 24px; background: #FFFFFF; box-shadow: 0 12px 30px -24px rgba(34,48,42,.45)">
+<div style="position: relative; height: 190px; border-radius: 18px; overflow: hidden; background: #EDE6D8"><svg viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%"><g stroke="#FFFFFF" fill="none" stroke-linecap="round"><path d="M-10 95 H410" stroke-width="12"></path><path d="M160 -10 V200" stroke-width="12"></path><path d="M-10 35 H410 M-10 155 H410 M60 -10 V200 M280 -10 V200 M350 -10 V200" stroke-width="5"></path></g></svg><span style="position: absolute; left: 50%; top: 50%; width: 22px; height: 22px; margin: -22px 0 0 -11px; border-radius: 99px 99px 99px 0; background: #12924A; border: 3px solid #FFFFFF; transform: rotate(-45deg)"></span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 8px 4px"><span style="line-height: 1.35"><b>Dirección de la oficina</b><br><span style="font-size: 14px; color: #6B756F">Horario de atención</span></span><a class="btn b-light" href="#" style="min-height: 40px; font-size: 14px; padding: 0 16px">Cómo llegar</a></div>
+</div>
+<div style="display: flex; gap: 8px"><a class="soc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor"></circle></svg></a><a class="soc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2Z"></path></svg></a><a class="soc" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9l5 3-5 3Z" fill="currentColor"></path></svg></a></div>
+</aside>
+</section>
+
+<footer style="background: #173B29; color: #C9D9CE; border-radius: 40px 40px 0 0">
+<div class="wrap" style="padding-top: 64px; padding-bottom: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(201,217,206,.15)">
+<div><h2 class="serif" style="margin: 0; font-size: clamp(38px, 4.4vw, 58px); color: #FAF6EF">¿Hablamos?</h2><p style="margin: 8px 0 0; font-size: 17px">Escribinos por WhatsApp, llamanos o pasá por la oficina.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px"><a class="btn b-green" href="contacto.html">Escribir por WhatsApp</a><a class="btn b-glass" href="index.html">Volver al inicio</a></div>
+</div>
+<div class="wrap fl" style="padding-top: 44px; padding-bottom: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; font-size: 15px">
+<div><span class="serif" style="font-size: 20px; color: #FAF6EF">Tu Inmobiliaria</span><p style="margin: 10px 0 0">Venta, alquiler, tasaciones y administración de propiedades.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FAF6EF">Secciones</b><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="contacto.html">Contacto</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FAF6EF">Oficina</b><span>Dirección de la oficina</span><span>Teléfono</span><span>WhatsApp</span><span>Correo electrónico</span></div>
+</div>
+<div class="wrap" style="padding-top: 18px; padding-bottom: 26px; border-top: 1px solid rgba(201,217,206,.15); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13.5px; color: #93A79A"><span>Sitio de ejemplo · Modelo 1 · Clásico</span><a href="../index.html" style="color: #E2C27A; text-decoration: none">Diseñado por TomasRamirezDev</a></div>
+</footer>
+</div>
+</div>
+<template id="dc-tpl">
+<div style="font-family: 'Figtree', sans-serif; color: #22302A; background: #FAF6EF; font-size: 16.5px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div style="background: #0E2A20; color: #E6ECE7; font-size: 13.5px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+<span><b style="color: #E2C27A">Sitio de ejemplo · Modelo 1 · Clásico.</b> Colores, fotos y secciones se adaptan a cada inmobiliaria.</span>
+<a href="../index.html" style="color: #E2C27A; text-decoration: none; font-weight: 600">← Volver a TomasRamirezDev</a>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 40; padding: 12px 0; background: rgba(250,246,239,.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px)">
+<div class="wrap">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 8px 8px 8px 18px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 14px 40px -26px rgba(34,48,42,.45)">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none"><svg viewBox="25 110 608 320" width="50" height="26" aria-hidden="true"><path fill="#12924A" d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z"></path><path fill="#12924A" d="M475.39 177.601 L618.476 251.256 L618.476 280.193 L475.39 353.849 L475.39 322.72 L542.899 288.523 L581.648 266.601 L581.648 264.848 L542.899 242.926 L475.39 208.729 Z"></path><path fill="#173B29" d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z"></path><path fill="#173B29" d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z"></path></svg><span class="serif" style="font-size: 20px; color: #173B29">Tu Inmobiliaria</span></a>
+<nav class="hide-m" aria-label="Principal" style="display: flex; gap: 4px"><a class="nl" href="index.html">Inicio</a><a class="nl" href="nosotros.html">Nosotros</a><a class="nl" href="propiedades.html">Propiedades</a><a class="nl" href="tasacion.html">Tasaciones</a><a class="nl on" href="contacto.html" aria-current="page">Contacto</a></nav>
+<div style="display: flex; align-items: center; gap: 8px"><a href="contacto.html" aria-label="WhatsApp" style="width: 44px; height: 44px; border-radius: 99px; background: #E1F2E5; color: #156B37; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg></a><a class="btn b-green hide-s" href="tasacion.html" style="min-height: 44px">Tasar mi propiedad</a><details class="mnav"><summary aria-label="Menú"><svg class="i-m" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-x" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary><nav class="mnav-panel" aria-label="Menú"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="contacto.html" aria-current="page">Contacto</a><a class="mn-cta" href="tasacion.html">Tasar mi propiedad</a></nav></details></div>
+</div>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 40px">
+<nav class="fu d1" aria-label="Ruta" style="font-size: 14px; color: #6B756F"><a href="index.html" style="color: #6B756F; text-decoration: none">Inicio</a> › Contacto</nav>
+<h1 class="serif fu d2" style="margin: 10px 0 0; font-size: clamp(46px, 5.4vw, 72px); line-height: 1; color: #173B29">Contacto</h1>
+<p class="fu d3" style="margin: 14px 0 0; max-width: 560px; color: #5B6760; font-size: 18px">Escribinos por WhatsApp, llamanos o completá el formulario. Si te interesa una propiedad, podés elegirla abajo.</p>
+</section>
+
+<section class="wrap" style="padding-top: 36px; padding-bottom: 90px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<div class="fu d2" style="flex: 2 1 560px; padding: 30px; border-radius: 28px; background: #FFFFFF; box-shadow: 0 30px 70px -44px rgba(34,48,42,.5)">
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="padding: 40px 10px; text-align: center"><span style="display: inline-flex; width: 64px; height: 64px; border-radius: 99px; background: #E1F2E5; color: #156B37; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><div class="serif" style="margin-top: 14px; font-size: 32px; color: #173B29">¡Gracias por escribirnos!</div><p style="margin: 8px auto 0; max-width: 420px; color: #5B6760">Recibimos tu consulta sobre <b>{{motivoLow}}</b>. Te respondemos por {{viaLow}} lo antes posible.</p><button type="button" class="btn b-light" onClick="{{reset}}" style="margin-top: 20px">Enviar otra consulta</button></div>
+</sc-if>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{send}}" style="display: flex; flex-direction: column; gap: 18px">
+<div><div class="lbl" style="margin-bottom: 10px">¿En qué te podemos ayudar?</div><div role="group" aria-label="Motivo" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{motivos}}" as="m" hint-placeholder-count="6"><button type="button" class="chip {{m.c}}" aria-pressed="{{m.p}}" onClick="{{m.pick}}">{{m.label}}</button></sc-for></div></div>
+<label class="lbl">Propiedad que te interesa <span style="font-weight: 400; color: #8A938D">(opcional)</span><span style="position: relative; display: block"><span style="position: absolute; left: 13px; top: 15px; color: #8A938D"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg></span><input class="fld" type="search" placeholder="Buscá por nombre o barrio" style="padding-left: 40px"></span></label>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 14px"><label class="lbl">Nombre y apellido<input class="fld" type="text" autocomplete="name"></label><label class="lbl">Teléfono / WhatsApp<input class="fld" type="tel" autocomplete="tel" placeholder="11 1234-5678"></label></div>
+<label class="lbl">Email<input class="fld" type="email" autocomplete="email" placeholder="tu@email.com"></label>
+<label class="lbl">Mensaje<textarea class="fld" rows="4" placeholder="Contanos qué estás buscando." style="padding: 12px 14px; min-height: 120px; resize: vertical"></textarea></label>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px">
+<div><div class="lbl" style="margin-bottom: 8px">Te respondemos por</div><div role="group" aria-label="Medio de respuesta" style="display: flex; padding: 4px; border-radius: 999px; background: #F2EADD"><sc-for list="{{vias}}" as="v" hint-placeholder-count="3"><button type="button" class="seg {{v.c}}" aria-pressed="{{v.p}}" onClick="{{v.pick}}">{{v.label}}</button></sc-for></div></div>
+<button type="submit" class="btn b-dark">Enviar mensaje</button>
+</div>
+</form>
+</sc-if>
+</div>
+
+<aside class="fu d3" style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+<a class="cc" href="#" style="background: #12924A; color: #FFFFFF"><span class="ci" style="background: rgba(255,255,255,.2)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg></span><span style="flex: 1; line-height: 1.35"><span style="font-size: 13px; opacity: .85">WhatsApp</span><br><b>Número de WhatsApp</b></span><span aria-hidden="true">→</span></a>
+<a class="cc" href="#"><span class="ci" style="background: #F8E7DA; color: #156B37"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6.9 6.9l1.5-2.3L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2Z"></path></svg></span><span style="line-height: 1.35"><span style="font-size: 13px; color: #6B756F">Teléfono</span><br><b>Teléfono de la oficina</b></span></a>
+<a class="cc" href="#"><span class="ci" style="background: #E1F2E5; color: #156B37"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M4 7l8 6 8-6"></path></svg></span><span style="line-height: 1.35"><span style="font-size: 13px; color: #6B756F">Email</span><br><b>correo@tuinmobiliaria.com</b></span></a>
+<div style="padding: 10px; border-radius: 24px; background: #FFFFFF; box-shadow: 0 12px 30px -24px rgba(34,48,42,.45)">
+<div style="position: relative; height: 190px; border-radius: 18px; overflow: hidden; background: #EDE6D8"><svg viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%"><g stroke="#FFFFFF" fill="none" stroke-linecap="round"><path d="M-10 95 H410" stroke-width="12"></path><path d="M160 -10 V200" stroke-width="12"></path><path d="M-10 35 H410 M-10 155 H410 M60 -10 V200 M280 -10 V200 M350 -10 V200" stroke-width="5"></path></g></svg><span style="position: absolute; left: 50%; top: 50%; width: 22px; height: 22px; margin: -22px 0 0 -11px; border-radius: 99px 99px 99px 0; background: #12924A; border: 3px solid #FFFFFF; transform: rotate(-45deg)"></span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 8px 4px"><span style="line-height: 1.35"><b>Dirección de la oficina</b><br><span style="font-size: 14px; color: #6B756F">Horario de atención</span></span><a class="btn b-light" href="#" style="min-height: 40px; font-size: 14px; padding: 0 16px">Cómo llegar</a></div>
+</div>
+<div style="display: flex; gap: 8px"><a class="soc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor"></circle></svg></a><a class="soc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2Z"></path></svg></a><a class="soc" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9l5 3-5 3Z" fill="currentColor"></path></svg></a></div>
+</aside>
+</section>
+
+<footer style="background: #173B29; color: #C9D9CE; border-radius: 40px 40px 0 0">
+<div class="wrap" style="padding-top: 64px; padding-bottom: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(201,217,206,.15)">
+<div><h2 class="serif" style="margin: 0; font-size: clamp(38px, 4.4vw, 58px); color: #FAF6EF">¿Hablamos?</h2><p style="margin: 8px 0 0; font-size: 17px">Escribinos por WhatsApp, llamanos o pasá por la oficina.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px"><a class="btn b-green" href="contacto.html">Escribir por WhatsApp</a><a class="btn b-glass" href="index.html">Volver al inicio</a></div>
+</div>
+<div class="wrap fl" style="padding-top: 44px; padding-bottom: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; font-size: 15px">
+<div><span class="serif" style="font-size: 20px; color: #FAF6EF">Tu Inmobiliaria</span><p style="margin: 10px 0 0">Venta, alquiler, tasaciones y administración de propiedades.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FAF6EF">Secciones</b><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="contacto.html">Contacto</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FAF6EF">Oficina</b><span>Dirección de la oficina</span><span>Teléfono</span><span>WhatsApp</span><span>Correo electrónico</span></div>
+</div>
+<div class="wrap" style="padding-top: 18px; padding-bottom: 26px; border-top: 1px solid rgba(201,217,206,.15); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13.5px; color: #93A79A"><span>Sitio de ejemplo · Modelo 1 · Clásico</span><a href="../index.html" style="color: #E2C27A; text-decoration: none">Diseñado por TomasRamirezDev</a></div>
+</footer>
+</div>
+</template>
+<script src="../assets/js/morphdom.min.js"></script>
+<script src="../assets/js/sitio.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { m: 'Comprar', via: 'WhatsApp', sent: false }; }
+  renderVals() {
+    const s = this.state;
+    const motivos = ['Comprar', 'Alquilar', 'Vender', 'Tasar', 'Administración', 'Otra consulta'].map((m) => ({ label: m, c: s.m === m ? 'on' : '', p: s.m === m ? 'true' : 'false', pick: () => this.setState({ m }) }));
+    const vias = ['WhatsApp', 'Llamada', 'Email'].map((v) => ({ label: v, c: s.via === v ? 'on' : '', p: s.via === v ? 'true' : 'false', pick: () => this.setState({ via: v }) }));
+    const motivoTxt = { 'Comprar': 'comprar una propiedad', 'Alquilar': 'alquilar', 'Vender': 'vender tu propiedad', 'Tasar': 'una tasación', 'Administración': 'administración de alquileres', 'Otra consulta': 'tu consulta' }[s.m];
+    return {
+      motivos, vias, sent: s.sent, notSent: !s.sent,
+      motivoLow: motivoTxt, viaLow: s.via === 'Llamada' ? 'teléfono' : s.via,
+      send: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false })
+    };
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

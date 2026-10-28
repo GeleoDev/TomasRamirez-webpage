@@ -1,0 +1,39 @@
+TomasRamirezDev — Sitio web listo para subir
+=============================================
+
+QUÉ HAY ACÁ
+- Carpeta "sitio": es todo lo que se sube al hosting.
+    index.html ............ tu landing (tomasramirezdev.com)
+    modelo-1/ ............. Ejemplo 1 · Clásico (6 páginas)
+    modelo-2/ ............. Ejemplo 2 · Moderno (6 páginas)
+    assets/ ............... fotos, video, y los 2 archivos JavaScript
+    favicon, robots.txt, sitemap.xml
+
+CÓMO SUBIRLO
+1. Entrá al panel de tu hosting y abrí el "Administrador de archivos"
+   (o conectate por FTP).
+2. Abrí la carpeta pública del dominio (casi siempre se llama "public_html").
+   Si adentro hay un index.html o una página por defecto del hosting, borrala.
+3. Subí TODO lo que está DENTRO de la carpeta "sitio" (no la carpeta en sí):
+   index.html tiene que quedar directamente en public_html.
+4. Entrá a https://tomasramirezdev.com y listo.
+   Si el hosting ofrece SSL gratis (Let's Encrypt), activalo para que cargue con https.
+
+FORMULARIO DE CONTACTO (IMPORTANTE, UNA SOLA VEZ)
+El formulario de la landing manda los mensajes a tomasramirezdev@hotmail.com
+usando FormSubmit (gratis, no hace falta cuenta).
+- La primera vez que alguien lo use, FormSubmit te manda un mail para ACTIVAR el formulario.
+  Ese primer mensaje no llega como consulta.
+- Por eso: apenas subas el sitio, mandate vos un mensaje de prueba desde la página,
+  buscá el mail de FormSubmit (fijate también en Correo no deseado) y tocá "Activate Form".
+- Desde ahí, cada consulta te llega al mail con nombre, inmobiliaria, teléfono y mensaje.
+
+CÓMO PROBARLO EN TU COMPU ANTES DE SUBIRLO
+Abrí sitio/index.html con doble clic. Todo se ve y funciona, salvo el formulario
+de la landing, que solo envía cuando la página ya está publicada.
+
+PARA CAMBIAR TEXTOS DESPUÉS
+Cada página es un archivo .html. El texto que se ve está dentro del bloque
+<template id="dc-tpl"> ... </template>. Si cambiás algo ahí, cambialo igual
+en el bloque <div id="dc-root"> de arriba (es la versión que lee Google), o pedímelo
+y te regenero el sitio desde el diseño.

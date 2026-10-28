@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasaciones · Modelo 2 · Moderno | Ejemplo de TomasRamirezDev</title>
+<meta name="description" content="Sitio de ejemplo para inmobiliarias (Modelo 2 · Moderno) diseñado por TomasRamirezDev. Propiedades y precios de muestra.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#17191B">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#F4F3EF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:#17191B}a:hover{color:#C4532F}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.kick{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5C6166}
+.kick b{color:#C4532F;font-weight:800}
+.h2{margin:10px 0 0;font-weight:800;font-size:clamp(30px,3.4vw,46px);line-height:1.04;letter-spacing:-.035em;color:#17191B}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,background-color .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.b-acc{background:#C4532F;color:#fff}.b-acc:hover{background:#A3402A;color:#fff}
+.b-ink{background:#17191B;color:#fff}.b-ink:hover{background:#000;color:#fff}
+.b-line{background:#fff;color:#17191B;border-color:#DAD7CF}.b-line:hover{border-color:#17191B;color:#17191B}
+.nl{position:relative;display:inline-flex;align-items:center;height:72px;color:#3B3F43;text-decoration:none;font-weight:600;font-size:15px}
+.nl::after{content:"";position:absolute;left:0;right:0;bottom:20px;height:2px;background:#C4532F;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nl:hover{color:#17191B}.nl:hover::after,.nl.on::after{transform:scaleX(1)}
+.nl.on{color:#17191B}
+.fs{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px 18px;padding:28px 0;border-top:1px solid #E2E0D9}
+.fs:first-child{border-top:none;padding-top:4px}
+.num{font-weight:800;font-size:28px;letter-spacing:-.03em;color:#C4532F;line-height:1.1}
+.fs h3{margin:0;font-weight:800;font-size:21px;letter-spacing:-.02em}
+.seg{display:inline-flex;flex-wrap:wrap;padding:4px;border-radius:12px;background:#ECE9E1}
+.seg button{min-height:42px;padding:0 16px;border:none;border-radius:9px;background:transparent;font-family:inherit;font-size:15px;font-weight:700;color:#5C6166;cursor:pointer;transition:background-color .2s,color .2s}
+.seg button.on{background:#fff;color:#17191B;box-shadow:0 2px 6px rgba(23,25,27,.12)}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 16px;border-radius:999px;border:1px solid #DAD7CF;background:#fff;font-family:inherit;font-size:15px;font-weight:600;color:#17191B;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.chip:hover{border-color:#17191B}
+.chip.on{background:#17191B;color:#fff;border-color:#17191B}
+.lbl{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;color:#3B3F43}
+.fld{width:100%;min-height:50px;padding:0 14px;border:1px solid #DAD7CF;border-radius:12px;background:#fff;font-family:inherit;font-size:15.5px;font-weight:500;color:#17191B}
+.fld:focus{outline:none;border-color:#17191B;box-shadow:0 0 0 3px rgba(23,25,27,.08)}
+.ctr{display:flex;flex-direction:column;gap:10px;min-width:0;padding:14px 16px;border-radius:14px;background:#fff;border:1px solid #DAD7CF}
+.ctr .cl{font-weight:700;font-size:14.5px;color:#3B3F43}
+.ctr .cc{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ctr b{min-width:26px;text-align:center;font-size:20px}
+.sb{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;border:1px solid #DAD7CF;background:#F4F3EF;font-family:inherit;font-size:18px;font-weight:700;color:#17191B;cursor:pointer}
+.sb:hover{border-color:#17191B}
+.row{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid #ECE9E1;font-size:15px}
+.row span{color:#5C6166}
+.row b{text-align:right}
+.qa{border-top:1px solid #DAD7CF}
+.qa button{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:20px 0;border:none;background:none;font-family:inherit;font-size:17px;font-weight:700;color:#17191B;text-align:left;cursor:pointer}
+.qa .pl{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:9px;background:#ECE9E1;font-size:18px;transition:transform .3s,background-color .3s,color .3s}
+.qa.on .pl{transform:rotate(45deg);background:#C4532F;color:#fff}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.2,.7,.2,1)}
+.qa.on .ans{grid-template-rows:1fr}
+.qa .ans > div{overflow:hidden}
+.fl a{color:#B9BCBF;text-decoration:none}.fl a:hover{color:#fff}
+.fu{opacity:0;animation:fu .8s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}.d4{animation-delay:.42s}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.pop{animation:pop .4s cubic-bezier(.2,.7,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 35%}@keyframes rv{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #C4532F;outline-offset:2px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:start}
+.side{position:sticky;top:96px}
+@media (max-width: 1060px){.layout{grid-template-columns:1fr}.side{position:relative;top:auto}}
+@media (max-width: 960px){.hide-m{display:none!important}}
+@media (max-width: 560px){.fs{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){.fu,.rv,.pop{animation:none!important;opacity:1!important;transform:none!important}}
+:root{--mn-r:12px;--mn-bd:#DAD7CF;--mn-bg:#FFFFFF;--mn-fg:#17191B;--mp-bg:#FFFFFF;--mp-bd:#E2E0D9;--mp-fg:#17191B;--mp-hv:#F4F3EF;--mc-bg:#C4532F;--mc-fg:#FFFFFF}
+.mnav{display:none}
+.mnav>summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--mn-r);border:1px solid var(--mn-bd);background:var(--mn-bg);color:var(--mn-fg);cursor:pointer}
+.mnav>summary::-webkit-details-marker{display:none}
+.mnav .i-x{display:none}.mnav[open] .i-x{display:block}.mnav[open] .i-m{display:none}
+.mnav-panel{position:absolute;left:16px;right:16px;top:calc(100% + 8px);display:flex;flex-direction:column;gap:2px;padding:10px;border-radius:18px;background:var(--mp-bg);border:1px solid var(--mp-bd);box-shadow:0 30px 60px -30px rgba(0,0,0,.45);z-index:80;animation:mnav .25s cubic-bezier(.2,.7,.2,1)}
+@keyframes mnav{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mnav-panel a{display:block;padding:13px 14px;border-radius:12px;font-size:16.5px;font-weight:600;color:var(--mp-fg);text-decoration:none}
+.mnav-panel a:hover,.mnav-panel a[aria-current]{background:var(--mp-hv);color:var(--mp-fg)}
+.mnav-panel a.mn-cta{margin-top:6px;text-align:center;background:var(--mc-bg);color:var(--mc-fg)}
+.mnav-panel a.mn-cta:hover{background:var(--mc-bg);color:var(--mc-fg);filter:brightness(.94)}
+@media (max-width: 960px){.mnav{display:block}}
+@media (max-width: 560px){.hide-s{display:none!important}}
+</style>
+<style>#dc-root{min-height:100vh}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #17191B; background: #F4F3EF; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div style="background: #0E2A20; color: #E6ECE7; font-size: 13.5px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+<span><b style="color: #E2C27A">Sitio de ejemplo · Modelo 2 · Moderno.</b> Colores, fotos y secciones se adaptan a cada inmobiliaria.</span>
+<a href="../index.html" style="color: #E2C27A; text-decoration: none; font-weight: 600">← Volver a TomasRamirezDev</a>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #17191B"><svg viewBox="25 110 608 320" width="50" height="26" aria-hidden="true"><path fill="#C4532F" d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z"></path><path fill="#C4532F" d="M475.39 177.601 L618.476 251.256 L618.476 280.193 L475.39 353.849 L475.39 322.72 L542.899 288.523 L581.648 266.601 L581.648 264.848 L542.899 242.926 L475.39 208.729 Z"></path><path fill="#17191B" d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z"></path><path fill="#17191B" d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z"></path></svg><span style="font-weight: 800; font-size: 20px; letter-spacing: -0.03em">tu<span style="color: #C4532F">inmobiliaria</span></span></a>
+<nav class="hide-m" aria-label="Principal" style="display: flex; gap: 32px"><a class="nl" href="index.html">Inicio</a><a class="nl" href="propiedades.html">Propiedades</a><a class="nl on" href="tasacion.html" aria-current="page">Tasaciones</a><a class="nl" href="nosotros.html">Nosotros</a><a class="nl" href="contacto.html">Contacto</a></nav>
+<div style="display: flex; align-items: center; gap: 10px"><a class="btn b-line hide-m" href="contacto.html" style="min-height: 44px; padding: 0 16px"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg>WhatsApp</a><a class="btn b-acc hide-s" href="tasacion.html" style="min-height: 44px">Publicá tu propiedad</a><details class="mnav"><summary aria-label="Menú"><svg class="i-m" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-x" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary><nav class="mnav-panel" aria-label="Menú"><a href="index.html">Inicio</a><a href="propiedades.html">Propiedades</a><a href="tasacion.html" aria-current="page">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a class="mn-cta" href="tasacion.html">Publicá tu propiedad</a></nav></details></div>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 56px; padding-bottom: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 48px; align-items: center">
+<div>
+<div class="kick fu d1"><b>●</b> Tasaciones</div>
+<h1 class="fu d2" style="margin: 16px 0 0; font-weight: 800; font-size: clamp(44px, 5.6vw, 80px); line-height: .98; letter-spacing: -0.05em">Sabé cuánto<br>vale tu <span style="color: #C4532F">propiedad.</span></h1>
+<p class="fu d3" style="margin: 22px 0 0; max-width: 500px; font-size: 18px; color: #5C6166">Completá el formulario de abajo. Una persona del equipo lo revisa, te llama y coordina una visita para darte un valor real de mercado.</p>
+<div class="fu d4" style="display: flex; flex-wrap: wrap; gap: 26px; margin-top: 30px">
+<div><b style="font-size: 28px; letter-spacing: -0.03em">Sin costo</b><br><span style="font-size: 14.5px; color: #5C6166">La tasación es gratis</span></div>
+<div><b style="font-size: 28px; letter-spacing: -0.03em">48 h</b><br><span style="font-size: 14.5px; color: #5C6166">Para tener el valor</span></div>
+<div><b style="font-size: 28px; letter-spacing: -0.03em">Por escrito</b><br><span style="font-size: 14.5px; color: #5C6166">Con un informe simple</span></div>
+</div>
+<a class="btn b-acc fu d4" href="#formulario" style="margin-top: 30px">Completar el formulario ↓</a>
+</div>
+<div class="fu d3" style="position: relative; height: 520px; border-radius: 24px; overflow: hidden; background: #E6E4DE">
+<img src="../assets/img/casa4-frente.webp" alt="Frente de una casa de barrio" style="width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; left: 18px; right: 18px; bottom: 18px; padding: 18px 20px; border-radius: 16px; background: rgba(255,255,255,.96)">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px"><span style="font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #C4532F">Informe de tasación</span><span style="font-size: 12px; font-weight: 700; color: #7A7F84">Ejemplo</span></div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; font-size: 13.5px; color: #5C6166"><span><b style="display: block; font-size: 17px; color: #17191B">Casa</b>Tipo</span><span><b style="display: block; font-size: 17px; color: #17191B">110 m²</b>Superficie</span><span><b style="display: block; font-size: 17px; color: #17191B">3 amb.</b>Ambientes</span></div>
+<div style="height: 8px; margin-top: 14px; border-radius: 99px; background: linear-gradient(90deg, #ECE9E1 0 18%, #C4532F 18% 72%, #ECE9E1 72%)"></div>
+<div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 13px; font-weight: 700; color: #5C6166"><span>Valor mínimo</span><span>Valor máximo</span></div>
+</div>
+</div>
+</section>
+
+<section id="formulario" class="wrap" style="padding-bottom: 96px; scroll-margin-top: 90px">
+<div class="layout">
+<div style="padding: 36px 40px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E2E0D9">
+
+<form data-on-submit="0">
+<div class="fs"><span class="num">01</span><div><h3>¿Qué querés hacer?</h3><div class="seg" role="group" aria-label="Operación" style="margin-top: 14px"><button type="button" class="on" aria-pressed="true" data-on-click="1">Vender</button><button type="button" class="" aria-pressed="false" data-on-click="2">Alquilar</button><button type="button" class="" aria-pressed="false" data-on-click="3">Solo saber el valor</button></div></div></div>
+<div class="fs"><span class="num">02</span><div><h3>¿Qué tipo de propiedad es?</h3><div role="group" aria-label="Tipo" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px"><button type="button" class="chip " aria-pressed="false" data-on-click="4">Casa</button><button type="button" class="chip " aria-pressed="false" data-on-click="5">Departamento</button><button type="button" class="chip " aria-pressed="false" data-on-click="6">PH</button><button type="button" class="chip " aria-pressed="false" data-on-click="7">Terreno</button><button type="button" class="chip " aria-pressed="false" data-on-click="8">Local</button></div></div></div>
+<div class="fs"><span class="num">03</span><div><h3>¿Dónde está?</h3><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; margin-top: 14px"><label class="lbl">Barrio o zona<input class="fld" type="text" required="" placeholder="Ej.: Centro" value="" data-on-input="9"></label><label class="lbl">Calle y altura<input class="fld" type="text" placeholder="Opcional"></label></div></div></div>
+<div class="fs"><span class="num">04</span><div><h3>¿Cómo es?</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; margin-top: 14px">
+<div class="ctr"><span class="cl">Ambientes</span><span class="cc"><button type="button" class="sb" data-on-click="10" aria-label="Restar Ambientes">−</button><b>3</b><button type="button" class="sb" data-on-click="11" aria-label="Sumar Ambientes">+</button></span></div><div class="ctr"><span class="cl">Dormitorios</span><span class="cc"><button type="button" class="sb" data-on-click="12" aria-label="Restar Dormitorios">−</button><b>2</b><button type="button" class="sb" data-on-click="13" aria-label="Sumar Dormitorios">+</button></span></div><div class="ctr"><span class="cl">Baños</span><span class="cc"><button type="button" class="sb" data-on-click="14" aria-label="Restar Baños">−</button><b>1</b><button type="button" class="sb" data-on-click="15" aria-label="Sumar Baños">+</button></span></div>
+</div>
+<label class="lbl" style="margin-top: 12px; max-width: 280px">Superficie cubierta aprox. (m²)<input class="fld" type="number" min="10" placeholder="Ej.: 120" value="" data-on-input="16"></label>
+<div style="margin-top: 16px; font-size: 14px; font-weight: 700; color: #3B3F43">Tiene…</div>
+<div role="group" aria-label="Extras" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px"><button type="button" class="chip " aria-pressed="false" data-on-click="17">Patio</button><button type="button" class="chip " aria-pressed="false" data-on-click="18">Jardín</button><button type="button" class="chip " aria-pressed="false" data-on-click="19">Cochera</button><button type="button" class="chip " aria-pressed="false" data-on-click="20">Parrilla</button><button type="button" class="chip " aria-pressed="false" data-on-click="21">Pileta</button><button type="button" class="chip " aria-pressed="false" data-on-click="22">Balcón</button></div>
+</div></div>
+<div class="fs"><span class="num">05</span><div><h3>Tus datos</h3><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; margin-top: 14px"><label class="lbl">Nombre<input class="fld" type="text" required="" placeholder="Tu nombre" value="" data-on-input="23"></label><label class="lbl">WhatsApp<input class="fld" type="tel" required="" placeholder="Con código de área" value="" data-on-input="24"></label><label class="lbl">Correo (opcional)<input class="fld" type="email" placeholder="tu@correo.com"></label><label class="lbl">¿Cuándo te llamamos?<select class="fld"><option>Por la mañana</option><option>Por la tarde</option><option>Me da igual</option></select></label></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 22px"><button type="submit" class="btn b-acc" style="min-height: 54px; padding: 0 28px">Pedir tasación</button><span style="font-size: 14px; color: #7A7F84">Usamos tus datos solo para contactarte por este pedido.</span></div>
+</div></div>
+</form>
+
+
+</div>
+
+<aside class="side">
+<div style="padding: 26px; border-radius: 22px; background: #17191B; color: #FFFFFF">
+<div style="display: flex; justify-content: space-between; align-items: center"><b style="font-size: 18px">Tu pedido</b><span style="font-size: 13.5px; font-weight: 700; color: #E9A58F">17% completo</span></div>
+<div style="height: 6px; margin-top: 12px; border-radius: 99px; background: #34373A; overflow: hidden"><div style="height: 100%; width: 17%; border-radius: 99px; background: #C4532F; transition: width .4s cubic-bezier(.2,.7,.2,1)"></div></div>
+<div style="margin-top: 14px; padding: 4px 16px; border-radius: 14px; background: #FFFFFF; color: #17191B">
+<div class="row"><span>Operación</span><b>Vender</b></div>
+<div class="row"><span>Tipo</span><b>—</b></div>
+<div class="row"><span>Zona</span><b>—</b></div>
+<div class="row"><span>Ambientes</span><b>3</b></div>
+<div class="row"><span>Dormitorios · baños</span><b>2 · 1</b></div>
+<div class="row"><span>Superficie</span><b>—</b></div>
+<div class="row" style="border-bottom: none"><span>Extras</span><b>—</b></div>
+</div>
+<p style="margin: 14px 0 0; font-size: 14px; color: #B9BCBF">¿Preferís hablar directo? <a href="contacto.html" style="color: #FFFFFF; font-weight: 700">Escribinos por WhatsApp</a>.</p>
+</div>
+</aside>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border-top: 1px solid #E2E0D9; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="padding-top: 88px; padding-bottom: 88px">
+<div class="rv"><div class="kick"><b>01</b> — Por qué con nosotros</div><h2 class="h2">Un valor real, no uno inflado.</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; margin-top: 36px">
+<div class="rv" style="padding: 28px; border-radius: 20px; background: #F4F3EF"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#C4532F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><h3 style="margin: 16px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.02em">Conocemos la zona</h3><p style="margin: 8px 0 0; color: #5C6166">Comparamos con propiedades parecidas que se vendieron o alquilaron cerca, no con promedios generales.</p></div>
+<div class="rv" style="padding: 28px; border-radius: 20px; background: #F4F3EF"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#C4532F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16"></path><path d="M6 15l4-4 3 3 5-6"></path></svg><h3 style="margin: 16px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.02em">Te decimos la verdad</h3><p style="margin: 8px 0 0; color: #5C6166">Un precio alto atrae menos interesados. Te damos un número con el que tu propiedad realmente se mueva.</p></div>
+<div class="rv" style="padding: 28px; border-radius: 20px; background: #F4F3EF"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#C4532F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h7l4 4v12H7z"></path><path d="M10 12h5M10 16h5"></path></svg><h3 style="margin: 16px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.02em">Sin compromiso</h3><p style="margin: 8px 0 0; color: #5C6166">Te damos el valor por escrito. Después decidís tranquilo si querés vender o alquilar con nosotros.</p></div>
+</div>
+</div>
+</section>
+
+<section class="wrap" style="padding-top: 88px; padding-bottom: 88px">
+<div class="rv"><div class="kick"><b>02</b> — Paso a paso</div><h2 class="h2">Qué pasa después de enviarlo</h2></div>
+<div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 24px; margin-top: 40px">
+<div aria-hidden="true" class="hide-m" style="position: absolute; left: 0; right: 0; top: 23px; height: 2px; background: #DAD7CF"></div>
+<div class="rv" style="position: relative"><span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #C4532F; color: #FFFFFF; font-weight: 800">1</span><h3 style="margin: 18px 0 0; font-size: 19px; font-weight: 800; letter-spacing: -0.02em">Recibimos tu pedido</h3><p style="margin: 6px 0 0; color: #5C6166">Lo lee una persona, no un sistema automático.</p></div>
+<div class="rv" style="position: relative"><span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #17191B; color: #FFFFFF; font-weight: 800">2</span><h3 style="margin: 18px 0 0; font-size: 19px; font-weight: 800; letter-spacing: -0.02em">Te llamamos</h3><p style="margin: 6px 0 0; color: #5C6166">Para conocer un poco más la propiedad y coordinar.</p></div>
+<div class="rv" style="position: relative"><span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #17191B; color: #FFFFFF; font-weight: 800">3</span><h3 style="margin: 18px 0 0; font-size: 19px; font-weight: 800; letter-spacing: -0.02em">Visitamos la casa</h3><p style="margin: 6px 0 0; color: #5C6166">Una visita corta, en el día y horario que te quede cómodo.</p></div>
+<div class="rv" style="position: relative"><span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #17191B; color: #FFFFFF; font-weight: 800">4</span><h3 style="margin: 18px 0 0; font-size: 19px; font-weight: 800; letter-spacing: -0.02em">Te damos el valor</h3><p style="margin: 6px 0 0; color: #5C6166">Por escrito, con una explicación simple de cómo llegamos a ese número.</p></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px 64px; align-items: start">
+<div class="rv"><div class="kick"><b>03</b> — Preguntas</div><h2 class="h2">Lo que más nos preguntan</h2><p style="margin: 14px 0 0; max-width: 380px; color: #5C6166">Si te queda alguna duda, escribinos y te respondemos en el día.</p><a class="btn b-line" href="contacto.html" style="margin-top: 22px">Hacer una consulta</a></div>
+<div class="rv" style="border-bottom: 1px solid #DAD7CF">
+<div class="qa on"><button type="button" aria-expanded="true" data-on-click="25">¿La tasación tiene costo?<span class="pl" aria-hidden="true">+</span></button><div class="ans"><div><p style="margin: 0 0 20px; padding-right: 48px; color: #5C6166">No. Es gratis y no te compromete a nada. Te damos el valor y vos decidís qué hacer.</p></div></div></div><div class="qa "><button type="button" aria-expanded="false" data-on-click="26">¿Cuánto tarda?<span class="pl" aria-hidden="true">+</span></button><div class="ans"><div><p style="margin: 0 0 20px; padding-right: 48px; color: #5C6166">Después de la visita, te damos el valor por escrito en un plazo de 48 horas hábiles.</p></div></div></div><div class="qa "><button type="button" aria-expanded="false" data-on-click="27">¿Tengo que estar en la visita?<span class="pl" aria-hidden="true">+</span></button><div class="ans"><div><p style="margin: 0 0 20px; padding-right: 48px; color: #5C6166">Sí, o alguien de confianza que nos pueda abrir. Suele durar entre 20 y 30 minutos.</p></div></div></div><div class="qa "><button type="button" aria-expanded="false" data-on-click="28">¿Me obliga a vender con ustedes?<span class="pl" aria-hidden="true">+</span></button><div class="ans"><div><p style="margin: 0 0 20px; padding-right: 48px; color: #5C6166">Para nada. Muchas personas tasan para saber dónde están paradas y deciden más adelante.</p></div></div></div><div class="qa "><button type="button" aria-expanded="false" data-on-click="29">¿Qué papeles necesito?<span class="pl" aria-hidden="true">+</span></button><div class="ans"><div><p style="margin: 0 0 20px; padding-right: 48px; color: #5C6166">Para la tasación no hace falta nada. Si después decidís vender, te decimos qué preparar.</p></div></div></div><div class="qa "><button type="button" aria-expanded="false" data-on-click="30">¿Tasan para sucesiones o divorcios?<span class="pl" aria-hidden="true">+</span></button><div class="ans"><div><p style="margin: 0 0 20px; padding-right: 48px; color: #5C6166">Sí. En esos casos el informe se arma con el formato que necesite tu abogado o escribano.</p></div></div></div>
+</div>
+</div>
+</section>
+
+<footer style="background: #17191B; color: #B9BCBF">
+<div class="wrap" style="padding-top: 72px">
+<div style="font-weight: 800; font-size: clamp(56px, 10vw, 150px); line-height: .9; letter-spacing: -0.06em; color: #FFFFFF">tu<span style="color: #C4532F">inmobiliaria</span></div>
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; margin-top: 48px; padding-bottom: 40px; font-size: 15px">
+<div><p style="margin: 0">Compra, venta, alquiler y tasaciones de propiedades.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Explorar</b><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Contacto</b><span>Dirección de la oficina</span><span>Teléfono y WhatsApp</span><span>Correo electrónico</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Horarios</b><span>Lunes a viernes</span><span>Sábados por la mañana</span></div>
+</div>
+<div style="padding: 18px 0 28px; border-top: 1px solid #2C2F33; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13.5px; color: #7A7F84"><span>Sitio de ejemplo · Modelo 2 · Moderno</span><a href="../index.html" style="color: #E2C27A; text-decoration: none">Diseñado por TomasRamirezDev</a></div>
+</div>
+</footer>
+</div>
+</div>
+<template id="dc-tpl">
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #17191B; background: #F4F3EF; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div style="background: #0E2A20; color: #E6ECE7; font-size: 13.5px">
+<div class="wrap" style="padding-top: 9px; padding-bottom: 9px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+<span><b style="color: #E2C27A">Sitio de ejemplo · Modelo 2 · Moderno.</b> Colores, fotos y secciones se adaptan a cada inmobiliaria.</span>
+<a href="../index.html" style="color: #E2C27A; text-decoration: none; font-weight: 600">← Volver a TomasRamirezDev</a>
+</div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 40; background: #FFFFFF; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #17191B"><svg viewBox="25 110 608 320" width="50" height="26" aria-hidden="true"><path fill="#C4532F" d="M182.227 353.849 L39.141 280.193 L39.141 251.256 L182.227 177.601 L182.227 208.729 L114.718 242.926 L75.969 264.848 L75.969 266.601 L114.718 288.523 L182.227 322.72 Z"></path><path fill="#C4532F" d="M475.39 177.601 L618.476 251.256 L618.476 280.193 L475.39 353.849 L475.39 322.72 L542.899 288.523 L581.648 266.601 L581.648 264.848 L542.899 242.926 L475.39 208.729 Z"></path><path fill="#17191B" d="M159.558 151.941 L145.558 122.228 L363.024 123.228 L349.024 151.941 L273.319 151.941 L273.319 417.431 L235.263 417.431 L235.263 151.941 Z"></path><path fill="#17191B" d="M354.575 153.411 L368.512 124.144 C370.705 124.789 372.854 125.488 374.961 126.24 C389.756 131.526 401.35 140.285 409.743 152.517 C418.137 164.75 422.333 181.135 422.333 201.674 C422.333 224.628 416.643 243.128 405.262 257.173 C393.881 271.218 378.517 280.807 359.17 285.942 L430.442 417.515 L390.325 417.515 L322.894 290.019 L278.937 290.019 L278.937 259.212 L319.053 259.212 C340.961 259.212 357.747 254.455 369.413 244.94 C381.078 235.426 386.911 221.004 386.911 201.674 C386.911 182.041 381.078 168.299 369.413 160.446 C365.15 157.577 360.204 155.231 354.575 153.411 Z"></path></svg><span style="font-weight: 800; font-size: 20px; letter-spacing: -0.03em">tu<span style="color: #C4532F">inmobiliaria</span></span></a>
+<nav class="hide-m" aria-label="Principal" style="display: flex; gap: 32px"><a class="nl" href="index.html">Inicio</a><a class="nl" href="propiedades.html">Propiedades</a><a class="nl on" href="tasacion.html" aria-current="page">Tasaciones</a><a class="nl" href="nosotros.html">Nosotros</a><a class="nl" href="contacto.html">Contacto</a></nav>
+<div style="display: flex; align-items: center; gap: 10px"><a class="btn b-line hide-m" href="contacto.html" style="min-height: 44px; padding: 0 16px"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"></path></svg>WhatsApp</a><a class="btn b-acc hide-s" href="tasacion.html" style="min-height: 44px">Publicá tu propiedad</a><details class="mnav"><summary aria-label="Menú"><svg class="i-m" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-x" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></summary><nav class="mnav-panel" aria-label="Menú"><a href="index.html">Inicio</a><a href="propiedades.html">Propiedades</a><a href="tasacion.html" aria-current="page">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a class="mn-cta" href="tasacion.html">Publicá tu propiedad</a></nav></details></div>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 56px; padding-bottom: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 48px; align-items: center">
+<div>
+<div class="kick fu d1"><b>●</b> Tasaciones</div>
+<h1 class="fu d2" style="margin: 16px 0 0; font-weight: 800; font-size: clamp(44px, 5.6vw, 80px); line-height: .98; letter-spacing: -0.05em">Sabé cuánto<br>vale tu <span style="color: #C4532F">propiedad.</span></h1>
+<p class="fu d3" style="margin: 22px 0 0; max-width: 500px; font-size: 18px; color: #5C6166">Completá el formulario de abajo. Una persona del equipo lo revisa, te llama y coordina una visita para darte un valor real de mercado.</p>
+<div class="fu d4" style="display: flex; flex-wrap: wrap; gap: 26px; margin-top: 30px">
+<div><b style="font-size: 28px; letter-spacing: -0.03em">Sin costo</b><br><span style="font-size: 14.5px; color: #5C6166">La tasación es gratis</span></div>
+<div><b style="font-size: 28px; letter-spacing: -0.03em">48 h</b><br><span style="font-size: 14.5px; color: #5C6166">Para tener el valor</span></div>
+<div><b style="font-size: 28px; letter-spacing: -0.03em">Por escrito</b><br><span style="font-size: 14.5px; color: #5C6166">Con un informe simple</span></div>
+</div>
+<a class="btn b-acc fu d4" href="#formulario" style="margin-top: 30px">Completar el formulario ↓</a>
+</div>
+<div class="fu d3" style="position: relative; height: 520px; border-radius: 24px; overflow: hidden; background: #E6E4DE">
+<img src="../assets/img/casa4-frente.webp" alt="Frente de una casa de barrio" style="width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; left: 18px; right: 18px; bottom: 18px; padding: 18px 20px; border-radius: 16px; background: rgba(255,255,255,.96)">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px"><span style="font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #C4532F">Informe de tasación</span><span style="font-size: 12px; font-weight: 700; color: #7A7F84">Ejemplo</span></div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; font-size: 13.5px; color: #5C6166"><span><b style="display: block; font-size: 17px; color: #17191B">Casa</b>Tipo</span><span><b style="display: block; font-size: 17px; color: #17191B">110 m²</b>Superficie</span><span><b style="display: block; font-size: 17px; color: #17191B">3 amb.</b>Ambientes</span></div>
+<div style="height: 8px; margin-top: 14px; border-radius: 99px; background: linear-gradient(90deg, #ECE9E1 0 18%, #C4532F 18% 72%, #ECE9E1 72%)"></div>
+<div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 13px; font-weight: 700; color: #5C6166"><span>Valor mínimo</span><span>Valor máximo</span></div>
+</div>
+</div>
+</section>
+
+<section id="formulario" class="wrap" style="padding-bottom: 96px; scroll-margin-top: 90px">
+<div class="layout">
+<div style="padding: 36px 40px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E2E0D9">
+<sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{send}}">
+<div class="fs"><span class="num">01</span><div><h3>¿Qué querés hacer?</h3><div class="seg" role="group" aria-label="Operación" style="margin-top: 14px"><sc-for list="{{ops}}" as="o" hint-placeholder-count="3"><button type="button" class="{{o.c}}" aria-pressed="{{o.p}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div></div>
+<div class="fs"><span class="num">02</span><div><h3>¿Qué tipo de propiedad es?</h3><div role="group" aria-label="Tipo" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px"><sc-for list="{{types}}" as="t" hint-placeholder-count="5"><button type="button" class="chip {{t.c}}" aria-pressed="{{t.p}}" onClick="{{t.pick}}">{{t.label}}</button></sc-for></div></div></div>
+<div class="fs"><span class="num">03</span><div><h3>¿Dónde está?</h3><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; margin-top: 14px"><label class="lbl">Barrio o zona<input class="fld" type="text" required placeholder="Ej.: Centro" value="{{zone}}" onInput="{{onZone}}"></label><label class="lbl">Calle y altura<input class="fld" type="text" placeholder="Opcional"></label></div></div></div>
+<div class="fs"><span class="num">04</span><div><h3>¿Cómo es?</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; margin-top: 14px">
+<sc-for list="{{ctrs}}" as="c" hint-placeholder-count="3"><div class="ctr"><span class="cl">{{c.label}}</span><span class="cc"><button type="button" class="sb" onClick="{{c.dec}}" aria-label="Restar {{c.label}}">−</button><b>{{c.v}}</b><button type="button" class="sb" onClick="{{c.inc}}" aria-label="Sumar {{c.label}}">+</button></span></div></sc-for>
+</div>
+<label class="lbl" style="margin-top: 12px; max-width: 280px">Superficie cubierta aprox. (m²)<input class="fld" type="number" min="10" placeholder="Ej.: 120" value="{{m2}}" onInput="{{onM2}}"></label>
+<div style="margin-top: 16px; font-size: 14px; font-weight: 700; color: #3B3F43">Tiene…</div>
+<div role="group" aria-label="Extras" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px"><sc-for list="{{extras}}" as="x" hint-placeholder-count="6"><button type="button" class="chip {{x.c}}" aria-pressed="{{x.p}}" onClick="{{x.toggle}}">{{x.label}}</button></sc-for></div>
+</div></div>
+<div class="fs"><span class="num">05</span><div><h3>Tus datos</h3><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; margin-top: 14px"><label class="lbl">Nombre<input class="fld" type="text" required placeholder="Tu nombre" value="{{name}}" onInput="{{onName}}"></label><label class="lbl">WhatsApp<input class="fld" type="tel" required placeholder="Con código de área" value="{{phone}}" onInput="{{onPhone}}"></label><label class="lbl">Correo (opcional)<input class="fld" type="email" placeholder="tu@correo.com"></label><label class="lbl">¿Cuándo te llamamos?<select class="fld"><option>Por la mañana</option><option>Por la tarde</option><option>Me da igual</option></select></label></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 22px"><button type="submit" class="btn b-acc" style="min-height: 54px; padding: 0 28px">Pedir tasación</button><span style="font-size: 14px; color: #7A7F84">Usamos tus datos solo para contactarte por este pedido.</span></div>
+</div></div>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div class="pop" style="padding: 24px 0">
+<span style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; background: #C4532F; color: #FFFFFF"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<h2 class="h2" style="margin-top: 18px">{{thanks}}</h2>
+<p style="margin: 12px 0 0; max-width: 540px; font-size: 17px; color: #5C6166">Recibimos tu pedido de tasación. Te vamos a escribir por WhatsApp para coordinar la visita. Si querés adelantarnos algo, escribinos directo.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px"><a class="btn b-ink" href="index.html">Volver al inicio</a><button type="button" class="btn b-line" onClick="{{again}}">Cargar otra propiedad</button></div>
+</div>
+</sc-if>
+</div>
+
+<aside class="side">
+<div style="padding: 26px; border-radius: 22px; background: #17191B; color: #FFFFFF">
+<div style="display: flex; justify-content: space-between; align-items: center"><b style="font-size: 18px">Tu pedido</b><span style="font-size: 13.5px; font-weight: 700; color: #E9A58F">{{pct}}% completo</span></div>
+<div style="height: 6px; margin-top: 12px; border-radius: 99px; background: #34373A; overflow: hidden"><div style="height: 100%; width: {{pct}}%; border-radius: 99px; background: #C4532F; transition: width .4s cubic-bezier(.2,.7,.2,1)"></div></div>
+<div style="margin-top: 14px; padding: 4px 16px; border-radius: 14px; background: #FFFFFF; color: #17191B">
+<div class="row"><span>Operación</span><b>{{sum.op}}</b></div>
+<div class="row"><span>Tipo</span><b>{{sum.type}}</b></div>
+<div class="row"><span>Zona</span><b>{{sum.zone}}</b></div>
+<div class="row"><span>Ambientes</span><b>{{sum.amb}}</b></div>
+<div class="row"><span>Dormitorios · baños</span><b>{{sum.db}}</b></div>
+<div class="row"><span>Superficie</span><b>{{sum.m2}}</b></div>
+<div class="row" style="border-bottom: none"><span>Extras</span><b>{{sum.ex}}</b></div>
+</div>
+<p style="margin: 14px 0 0; font-size: 14px; color: #B9BCBF">¿Preferís hablar directo? <a href="contacto.html" style="color: #FFFFFF; font-weight: 700">Escribinos por WhatsApp</a>.</p>
+</div>
+</aside>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border-top: 1px solid #E2E0D9; border-bottom: 1px solid #E2E0D9">
+<div class="wrap" style="padding-top: 88px; padding-bottom: 88px">
+<div class="rv"><div class="kick"><b>01</b> — Por qué con nosotros</div><h2 class="h2">Un valor real, no uno inflado.</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; margin-top: 36px">
+<div class="rv" style="padding: 28px; border-radius: 20px; background: #F4F3EF"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#C4532F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><h3 style="margin: 16px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.02em">Conocemos la zona</h3><p style="margin: 8px 0 0; color: #5C6166">Comparamos con propiedades parecidas que se vendieron o alquilaron cerca, no con promedios generales.</p></div>
+<div class="rv" style="padding: 28px; border-radius: 20px; background: #F4F3EF"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#C4532F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16"></path><path d="M6 15l4-4 3 3 5-6"></path></svg><h3 style="margin: 16px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.02em">Te decimos la verdad</h3><p style="margin: 8px 0 0; color: #5C6166">Un precio alto atrae menos interesados. Te damos un número con el que tu propiedad realmente se mueva.</p></div>
+<div class="rv" style="padding: 28px; border-radius: 20px; background: #F4F3EF"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#C4532F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h7l4 4v12H7z"></path><path d="M10 12h5M10 16h5"></path></svg><h3 style="margin: 16px 0 0; font-size: 20px; font-weight: 800; letter-spacing: -0.02em">Sin compromiso</h3><p style="margin: 8px 0 0; color: #5C6166">Te damos el valor por escrito. Después decidís tranquilo si querés vender o alquilar con nosotros.</p></div>
+</div>
+</div>
+</section>
+
+<section class="wrap" style="padding-top: 88px; padding-bottom: 88px">
+<div class="rv"><div class="kick"><b>02</b> — Paso a paso</div><h2 class="h2">Qué pasa después de enviarlo</h2></div>
+<div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 24px; margin-top: 40px">
+<div aria-hidden="true" class="hide-m" style="position: absolute; left: 0; right: 0; top: 23px; height: 2px; background: #DAD7CF"></div>
+<div class="rv" style="position: relative"><span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #C4532F; color: #FFFFFF; font-weight: 800">1</span><h3 style="margin: 18px 0 0; font-size: 19px; font-weight: 800; letter-spacing: -0.02em">Recibimos tu pedido</h3><p style="margin: 6px 0 0; color: #5C6166">Lo lee una persona, no un sistema automático.</p></div>
+<div class="rv" style="position: relative"><span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #17191B; color: #FFFFFF; font-weight: 800">2</span><h3 style="margin: 18px 0 0; font-size: 19px; font-weight: 800; letter-spacing: -0.02em">Te llamamos</h3><p style="margin: 6px 0 0; color: #5C6166">Para conocer un poco más la propiedad y coordinar.</p></div>
+<div class="rv" style="position: relative"><span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #17191B; color: #FFFFFF; font-weight: 800">3</span><h3 style="margin: 18px 0 0; font-size: 19px; font-weight: 800; letter-spacing: -0.02em">Visitamos la casa</h3><p style="margin: 6px 0 0; color: #5C6166">Una visita corta, en el día y horario que te quede cómodo.</p></div>
+<div class="rv" style="position: relative"><span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: #17191B; color: #FFFFFF; font-weight: 800">4</span><h3 style="margin: 18px 0 0; font-size: 19px; font-weight: 800; letter-spacing: -0.02em">Te damos el valor</h3><p style="margin: 6px 0 0; color: #5C6166">Por escrito, con una explicación simple de cómo llegamos a ese número.</p></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom: 96px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px 64px; align-items: start">
+<div class="rv"><div class="kick"><b>03</b> — Preguntas</div><h2 class="h2">Lo que más nos preguntan</h2><p style="margin: 14px 0 0; max-width: 380px; color: #5C6166">Si te queda alguna duda, escribinos y te respondemos en el día.</p><a class="btn b-line" href="contacto.html" style="margin-top: 22px">Hacer una consulta</a></div>
+<div class="rv" style="border-bottom: 1px solid #DAD7CF">
+<sc-for list="{{faq}}" as="f" hint-placeholder-count="6"><div class="qa {{f.c}}"><button type="button" aria-expanded="{{f.p}}" onClick="{{f.toggle}}">{{f.q}}<span class="pl" aria-hidden="true">+</span></button><div class="ans"><div><p style="margin: 0 0 20px; padding-right: 48px; color: #5C6166">{{f.a}}</p></div></div></div></sc-for>
+</div>
+</div>
+</section>
+
+<footer style="background: #17191B; color: #B9BCBF">
+<div class="wrap" style="padding-top: 72px">
+<div style="font-weight: 800; font-size: clamp(56px, 10vw, 150px); line-height: .9; letter-spacing: -0.06em; color: #FFFFFF">tu<span style="color: #C4532F">inmobiliaria</span></div>
+<div class="fl" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; margin-top: 48px; padding-bottom: 40px; font-size: 15px">
+<div><p style="margin: 0">Compra, venta, alquiler y tasaciones de propiedades.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Explorar</b><a href="propiedades.html">Propiedades</a><a href="tasacion.html">Tasaciones</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Contacto</b><span>Dirección de la oficina</span><span>Teléfono y WhatsApp</span><span>Correo electrónico</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><b style="color: #FFFFFF">Horarios</b><span>Lunes a viernes</span><span>Sábados por la mañana</span></div>
+</div>
+<div style="padding: 18px 0 28px; border-top: 1px solid #2C2F33; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13.5px; color: #7A7F84"><span>Sitio de ejemplo · Modelo 2 · Moderno</span><a href="../index.html" style="color: #E2C27A; text-decoration: none">Diseñado por TomasRamirezDev</a></div>
+</div>
+</footer>
+</div>
+</template>
+<script src="../assets/js/morphdom.min.js"></script>
+<script src="../assets/js/sitio.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { op: 'vender', type: '', zone: '', amb: 3, dorm: 2, banos: 1, m2: '', ex: {}, name: '', phone: '', sent: false, open: 0 };
+  }
+  renderVals() {
+    const s = this.state;
+    const opsDef = [['vender', 'Vender'], ['alquilar', 'Alquilar'], ['valor', 'Solo saber el valor']];
+    const typesDef = ['Casa', 'Departamento', 'PH', 'Terreno', 'Local'];
+    const exDef = ['Patio', 'Jardín', 'Cochera', 'Parrilla', 'Pileta', 'Balcón'];
+    const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+    const ctr = (key, label, lo) => ({
+      label, v: s[key],
+      dec: () => this.setState({ [key]: clamp(this.state[key] - 1, lo, 12) }),
+      inc: () => this.setState({ [key]: clamp(this.state[key] + 1, lo, 12) })
+    });
+    const exList = exDef.filter((x) => s.ex[x]);
+    const filled = [true, !!s.type, !!s.zone.trim(), !!String(s.m2).trim(), !!s.name.trim(), !!s.phone.trim()];
+    const pct = Math.round((filled.filter(Boolean).length / filled.length) * 100);
+    const faqDef = [
+      ['¿La tasación tiene costo?', 'No. Es gratis y no te compromete a nada. Te damos el valor y vos decidís qué hacer.'],
+      ['¿Cuánto tarda?', 'Después de la visita, te damos el valor por escrito en un plazo de 48 horas hábiles.'],
+      ['¿Tengo que estar en la visita?', 'Sí, o alguien de confianza que nos pueda abrir. Suele durar entre 20 y 30 minutos.'],
+      ['¿Me obliga a vender con ustedes?', 'Para nada. Muchas personas tasan para saber dónde están paradas y deciden más adelante.'],
+      ['¿Qué papeles necesito?', 'Para la tasación no hace falta nada. Si después decidís vender, te decimos qué preparar.'],
+      ['¿Tasan para sucesiones o divorcios?', 'Sí. En esos casos el informe se arma con el formato que necesite tu abogado o escribano.']
+    ];
+    const nm = s.name.trim().split(' ')[0];
+    return {
+      ops: opsDef.map(([k, l]) => ({ label: l, c: s.op === k ? 'on' : '', p: s.op === k ? 'true' : 'false', pick: () => this.setState({ op: k }) })),
+      types: typesDef.map((t) => ({ label: t, c: s.type === t ? 'on' : '', p: s.type === t ? 'true' : 'false', pick: () => this.setState({ type: t }) })),
+      ctrs: [ctr('amb', 'Ambientes', 1), ctr('dorm', 'Dormitorios', 0), ctr('banos', 'Baños', 1)],
+      extras: exDef.map((x) => ({ label: x, c: s.ex[x] ? 'on' : '', p: s.ex[x] ? 'true' : 'false', toggle: () => { const ex = Object.assign({}, this.state.ex); ex[x] = !ex[x]; this.setState({ ex }); } })),
+      zone: s.zone, m2: s.m2, name: s.name, phone: s.phone,
+      onZone: (e) => this.setState({ zone: e.target.value }),
+      onM2: (e) => this.setState({ m2: e.target.value }),
+      onName: (e) => this.setState({ name: e.target.value }),
+      onPhone: (e) => this.setState({ phone: e.target.value }),
+      pct,
+      sum: {
+        op: opsDef.find((o) => o[0] === s.op)[1],
+        type: s.type || '—',
+        zone: s.zone.trim() || '—',
+        amb: String(s.amb),
+        db: s.dorm + ' · ' + s.banos,
+        m2: String(s.m2).trim() ? s.m2 + ' m²' : '—',
+        ex: exList.length ? exList.join(', ') : '—'
+      },
+      notSent: !s.sent, sent: s.sent,
+      thanks: nm ? '¡Gracias, ' + nm + '!' : '¡Gracias!',
+      send: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      again: () => this.setState({ sent: false, type: '', zone: '', m2: '', ex: {}, amb: 3, dorm: 2, banos: 1 }),
+      faq: faqDef.map(([q, a], i) => ({ q, a, c: s.open === i ? 'on' : '', p: s.open === i ? 'true' : 'false', toggle: () => this.setState({ open: this.state.open === i ? -1 : i }) }))
+    };
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>
