@@ -1,0 +1,34 @@
+{
+  "name": "tomasramirezdev-panel",
+  "version": "1.0.0",
+  "description": "Panel y API de tomasramirezdev.com",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "migrate": "node --env-file=.env src/migrate.js",
+    "create-admin": "node --env-file=.env scripts/create-admin.js",
+    "test": "node --env-file=.env.test --test --test-concurrency=1 tests/*.test.js"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.1.5",
+    "@fastify/helmet": "^13.2.0",
+    "@fastify/multipart": "^9.4.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/static": "^8.3.0",
+    "argon2": "^0.41.1",
+    "fastify": "^5.12.8",
+    "marked": "^15.0.12",
+    "otpauth": "^9.5.2",
+    "pg": "^8.23.1",
+    "qrcode": "^1.5.4",
+    "sanitize-html": "^2.18.1",
+    "sharp": "^0.33.5",
+    "zod": "^3.25.76"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

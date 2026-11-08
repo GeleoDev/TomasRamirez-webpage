@@ -1,0 +1,34 @@
+[Unit]
+Description=Panel y API de tomasramirezdev.com
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=trpanel
+Group=trpanel
+WorkingDirectory=/opt/tomasramirezdev-panel
+ExecStart=/usr/bin/env node --env-file=/opt/tomasramirezdev-panel/.env src/server.js
+Restart=always
+RestartSec=3
+Environment=NODE_ENV=production
+
+# Aislamiento: el proceso solo puede escribir en la carpeta de imágenes.
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/www/tomasramirezdev-uploads
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictRealtime=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+UMask=0022
+
+[Install]
+WantedBy=multi-user.target
