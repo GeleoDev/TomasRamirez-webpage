@@ -1,0 +1,10 @@
+# Dependencias y configuración local
+node_modules/
+.env
+.env.test
+backend/uploads/
+backend/uploads-*/
+
+# Paquetes generados para subir al servidor
+*.zip
+!tomasramirezdev-sitio.zip
